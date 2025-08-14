@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+
+    <style>
+      body {
+  cursor: none;
+}
+
+/* .cursor-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+} */
+
+
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #636060;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease;
+  z-index: 9999;
+}
+
+.cursor.hover {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+    </style>
+  </head>
+  <body>
+     <div class="cursor"></div>
+
+     <!-- <script>
+      const circle = document.querySelector('.cursor-circle');
+let targetX = 0, targetY = 0;
+let currentX = 0, currentY = 0;
+const ease = 0.15;
+
+document.addEventListener('mousemove', e => {
+  targetX = e.clientX;
+  targetY = e.clientY;
+});
+
+function animate() {
+  currentX += (targetX - currentX) * ease;
+  currentY += (targetY - currentY) * ease;
+  circle.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+     </script> -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      const cursor = document.querySelector(".cursor");
+
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+const speed = 0.15; // smoothness
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animate() {
+  currentX += (mouseX - currentX) * speed;
+  currentY += (mouseY - currentY) * speed;
+  cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Hover effect for clickable elements
+document.querySelectorAll("a, button").forEach(el => {
+  el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+  el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+});
+
+    </script>
+  </body>
+</html>
