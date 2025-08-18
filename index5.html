@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: white;
+        }
+        
+        .slide-container {
+            position: relative;
+            height: 100vh;
+            width: 200vw;
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .slide-container.slide-right {
+            transform: translateX(-100vw);
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* First Slide - White Background */
+        .slide-1 {
+            background: white;
+            color: black;
+        }
+        
+        /* Second Slide - Black Background */
+        .slide-2 {
+            background: black;
+            color: white;
+        }
+        
+        .slide-content {
+            width: 100%;
+            padding-left: 80px;
+            max-width: 800px;
+        }
+        
+        .main-title {
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            color: #0F0000;
+            font-family:"MiedingerBold";
+            font-size: 60.325px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .description-container {
+            display: flex;
+            gap: 50px;
+            max-width: 700px;
+        }
+        
+        .description {
+            width: 906px;
+            flex: 1;
+            color: #000;
+            text-align: center;
+            font-family: "SafiroMedium";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        
+        .description a {
+            color: inherit;
+            text-decoration: underline;
+        }
+        
+        /* Small icon positioned exactly in the title */
+        .title-icon {
+            position: absolute;
+            top: 38%;
+            right: 42%;
+            width: 80px;
+            height: 60px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .icon-base {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #e8e8e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .icon-overlay {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f8a5c2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: top 0.3s ease;
+        }
+        
+        .title-icon:hover .icon-overlay {
+            top: 0;
+        }
+        
+        .title-icon:hover .icon-base {
+            transform: translateY(100%);
+        }
+        
+        .icon-base i,
+        .icon-overlay i {
+            font-size: 20px;
+            color: #666;
+        }
+        
+        .icon-overlay i {
+            color: white;
+        }
+        
+        /* Bottom right circular arrow */
+        .nav-arrow {
+            position: absolute;
+            top: 250px;
+            right: 5px;
+            width: 70px;
+            height: 70px;
+            /* background: black; */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .slide-2 .nav-arrow {
+            background: white;
+            left: 80px;
+            right: auto;
+        }
+        
+        /* .nav-arrow:hover {
+            transform: scale(1.1);
+        } */
+        
+        .nav-arrow i {
+            font-size: 20px;
+            color: white;
+        }
+        
+        .slide-2 .nav-arrow i {
+            color: black;
+        }
+        
+        
+        /* Second slide specific styles */
+        .pink-shape {
+            position: absolute;
+            left: -250px;
+            top: -100px;
+            width: 600px;
+            height: 800px;
+            background: #f8a5c2;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+        
+        .shape-icon {
+            position: absolute;
+            top: 350px;
+            right: 200px;
+            width: 100px;
+            height: 80px;
+            background: white;
+            transform: rotate(-45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .shape-icon-base {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .shape-icon-overlay {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f8a5c2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: top 0.3s ease;
+        }
+        
+        .shape-icon:hover .shape-icon-overlay {
+            top: 0;
+        }
+        
+        .shape-icon:hover .shape-icon-base {
+            transform: translateY(100%);
+        }
+        
+        .shape-icon i {
+            font-size: 28px;
+            color: #666;
+        }
+        
+        .shape-icon-overlay i {
+            color: white;
+        }
+        
+        .form-section {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: 120px;
+        }
+        
+        .form-title {
+           width: 781.63px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #FFF;
+            font-family: "MiedingerBold";
+            font-size: 42.145px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+        
+        .form-group {
+            flex: 1;
+            position: relative;
+        }
+        
+        .form-label {
+           width: 84px;
+            display: block;
+            color: #FFF;
+            font-family: "Safiro";
+           font-size: 16px;
+           font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        
+        .form-control {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #555;
+            /* padding: 20px 0; */
+            color: white;
+            font-size: 1.2rem;
+            outline: none;
+        }
+        
+        .form-control:focus {
+            border-bottom-color: #f8a5c2;
+        }
+        
+        .form-control::placeholder {
+            color: #777;
+            font-size: 1.1rem;
+        }
+        
+        .submit-btn {
+            background: white;
+            border: none;
+            padding: 3px 27px;
+            border-radius: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+            color: #140102;
+            font-family: "MiedingerBold";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .submit-btn:hover {
+            background: #f8a5c2;
+            color: white;
+        }
+        
+        /* Up arrow at bottom center of second slide */
+        .up-arrow {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .up-arrow:hover {
+            transform: translateX(-50%) scale(1.1);
+        }
+        
+        .up-arrow i {
+            color: white;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-title {
+                font-size: 5rem;
+            }
+            
+            .title-icon {
+                right: 35%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 4rem;
+            }
+            
+            .slide-content {
+                padding-left: 40px;
+            }
+            
+            .description-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .form-section {
+                margin-right: 40px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .nav-arrow, .up-arrow {
+                bottom: 40px;
+            }
+            
+            .nav-arrow {
+                right: 40px;
+            }
+            
+            .slide-2 .nav-arrow {
+                left: 40px;
+            }
+            
+            .title-icon {
+                right: 20%;
+                top: 35%;
+            }
+        }
+
+
+.nav-arrow.prefooter-icon-clip {
+  --icon-size: 35rem;       
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111; 
+  user-select: none;
+  outline: none;
+  overflow: hidden; /* important for slide effect */
+}
+
+.prefooter-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.prefooter-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke-width: 16px;
+  stroke-miterlimit: 10;
+  fill: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* default black arrow */
+.prefooter-icon .icon-default { 
+  opacity: 1; 
+  transform: translate(0,0); 
+}
+
+/* pink hover arrow starts outside top-left for down-right slide */
+.prefooter-icon .icon-hover { 
+  opacity: 0; 
+  transform: translate(-100%, -100%); 
+   color: #f2cdcf;
+}
+
+/* hover/focus effect */
+.prefooter-icon-clip:hover .icon-default,
+.prefooter-icon-clip:focus-visible .icon-default { 
+  opacity: 0; 
+  transform: translate(100%, 100%); /* slide out down-right */ 
+}
+
+.prefooter-icon-clip:hover .icon-hover,
+.prefooter-icon-clip:focus-visible .icon-hover { 
+  opacity: 1; 
+  transform: translate(0,0); /* slide in to center */ 
+}
+
+/* click feedback */
+.prefooter-icon-clip:active .prefooter-icon svg {
+  transform: scale(.95);
+}
+
+
+
+/* click feedback */
+/* .prefooter-icon-clip:active .prefooter-icon svg{
+  transform: scale(.95);
+} */
+
+/* optional: make it extra large on bigger screens */
+@media (min-width: 992px){
+  /* .nav-arrow.prefooter-icon-clip{ --icon-size: 112px; } */
+}
+
+
+ .nav-arrow,
+.prefooter-icon-clip,
+.prefooter-icon svg {
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}   
+
+
+
+.nav-arrow.prefooter-icon-clip-left{
+  --icon-size:40rem; /* adjust */
+  width:var(--icon-size);
+  height:var(--icon-size);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+/* keep the icon absolutely positioned and inert until hover */
+.prefooter-icons{ position:relative; width:100%; height:100%; }
+.prefooter-icons svg{
+  position:absolute; inset:0; width:100%; height:100%;
+  opacity:0; transform:translateX(100%);  /* start off to the right, hidden */
+  transition:none;                         /* IMPORTANT: no conflicting transitions */
+  pointer-events:none;                     /* hover stays on container */
+}
+
+/* run animation only while hovered (and via keyboard focus) */
+.nav-arrow.prefooter-icon-clip-left:hover .icon-hover,
+.nav-arrow.prefooter-icon-clip-left:focus-visible .icon-hover{
+  animation: revealThenExit 1s ease-out forwards;
+}
+
+@keyframes revealThenExit{
+  0%   { opacity:0; transform:translateX(100%); } /* hidden on right */
+  30%  { opacity:1; transform:translateX(0); }    /* appear at center */
+  100% { opacity:0; transform:translateX(-100%);} /* slide out left & hide */
+}
+
+/* optional click feedback */
+.nav-arrow.prefooter-icon-clip-left:active .icon-hover{ transform:scale(.95); }
+
+/* accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .nav-arrow.prefooter-icon-clip-left:hover .icon-hover,
+  .nav-arrow.prefooter-icon-clip-left:focus-visible .icon-hover{
+    animation:none; opacity:1; /* simply show without motion */
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="slide-container" id="slideContainer">
+        <!-- Slide 1 - Let's Get Started -->
+        <div class="slide slide-1">
+            <!-- Large gray circle background -->
+            <!-- <div class="bg-circle"></div> -->
+            
+            <div class="slide-content">
+                <h1 class="main-title">
+                    LET'S<br>
+                    begin<br>
+                    a dialogue
+                </h1>
+                
+                <div class="description-container">
+                    <p class="description">
+                       Share your contact information and we’ll get back to you to discuss next steps.
+                    </p>
+                </div>
+            </div>
+            <!-- Replace your existing icon wrapper with this -->
+              <div
+                class="nav-arrow prefooter-icon-clip"
+                role="button"
+                aria-label="Next slide"
+                tabindex="0"
+                onclick="slideToNext()"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+              >
+                <div class="prefooter-icon" aria-hidden="true">
+                  <!-- default -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                    <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                    <g>
+                      <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                      <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                    </g>
+                  </svg>
+
+                  <!-- hover state -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                    <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                    <g>
+                      <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                      <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+
+        </div>
+        
+        <!-- Slide 2 - Ask for Callback -->
+        <div class="slide slide-2">
+            <!-- Form content on the right -->
+            <div class="form-section">
+                <h2 class="form-title">ASK FOR A CALLBACK.</h2>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="eg. Michael">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Number</label>
+                            <input type="tel" class="form-control" placeholder="+44 7000 0000">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+            
+            <!-- Bottom left back arrow -->
+            <!-- <div class="nav-arrow" onclick="slideToFirst()">
+                <i class="fas fa-arrow-left"></i>
+            </div> -->
+ <div
+  class="nav-arrow prefooter-icon-clip-left"
+  role="button"
+  aria-label="Previous slide"
+  tabindex="0"
+  onclick="slideToFirst()"
+  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+     style="width:54vw;">
+  <div class="prefooter-icons" aria-hidden="true">
+    <!-- Pink Arrow -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="icon-hover">
+      <line x1="50" y1="30" x2="10" y2="30" stroke="hotpink" stroke-width="16" stroke-linecap="round"/>
+      <polyline points="20,20 10,30 20,40" stroke="hotpink" stroke-width="16" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+</div>
+
+
+            
+            <!-- Bottom center up arrow -->
+            <div class="up-arrow">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+</body>
+</html>
