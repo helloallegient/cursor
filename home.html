@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <title>RGB Website</title>
+  <style>
+.gujral-quote .cursor {
+    display: inline-block;
+    width: 1ch;
+    border-right: 2px solid currentColor;
+    animation: blink .15s steps(1) infinite;
+    vertical-align: -2px;
+  }
+  @keyframes blink { 50% { border-color: transparent; } }
+
+ .headline-clip {
+  overflow: hidden; /* hides the text until it reveals */
+  display: inline-block;
+}
+
+.reveal-text {
+  display: inline-block;
+  transform: translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(-90deg) skew(0deg, 0deg);
+  transform-origin: bottom; /* pivot from bottom edge */
+  transform-style: preserve-3d;
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1),
+              opacity 0.8s ease;
+}
+
+/* When active, bring the text into place */
+.reveal-text.active {
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) skew(0deg, 0deg);
+  opacity: 1;
+}
+
+canvas {
+  position:fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  opacity: 0.2; /* ✅ important */
+  background: transparent; /* ✅ important */
+}
+  </style>
+    
+</head>
+<body>
+<div class="cursor-circle"></div>
+ <!-- <canvas></canvas> -->
+  <div class="container-fluid" style="position: relative; z-index: 0;">
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+      
+              <!-- Left Logo Image animation -->
+        <video src="assets/Logo.webm"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              class="position-absolute z-2 logo-video">
+        </video>
+
+    
+      <!-- Right Icon Dots Image -->
+      <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon">A</span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+<div class="menu">
+  <p class="anim-text">WHO WE ARE</p>
+  <p class="anim-text">WHAT WE DO</p>
+  <p class="anim-text">OUR BRANDS</p>
+</div>
+
+<div class="services">
+  <div class="branding">
+    <p class="anim-text">RGA DESIGN LLP</p>
+    <p class="anim-text">CASA PARADOX LUXE</p>
+    <p class="anim-text">CASA POP</p>
+    <p class="anim-text">ARZAANI</p>
+    <p class="anim-text">RASEEL GUJRAL ART LEGACY</p>
+    <p class="anim-text">SATISH GUJRAL ART</p>
+  </div>
+</div>
+
+<div class="menu">
+  <p class="anim-text">LET'S CONNECT</p>
+</div>
+
+        
+        <div class="video-block">
+          <video autoplay muted loop playsinline width="100%" height="auto">
+            <source src="assets/ParadoxLuxe.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    
+
+
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-10 col-xl-8">
+            <video src="assets/FLOWER_1.webm"
+             autoplay
+             loop
+             muted
+             playsinline
+             preload="auto" class="flower-animate mt-4 mt-md-0 mt-lg-0">
+           </video>
+            <h1 class="hero-title-one reveal-text headline-clip custom-text mt-lg-18 mt-n2 margin-minus-one">RASEEL</h1>
+            <div class="hero-title-two reveal-text headline-clip margin-top">GUJRAL ANSAL</div>
+        
+            <h1 class="hero-title">A Dialogue with Identity</h1>
+          </div>
+          <div class="col-12 col-lg-10 col-xl-8">
+            <p class="hero-desc fade-in delay-1">
+              Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design for close to four decades, brings her unparalleled expertise and artistic vision to this unique exploration. Known for her pioneering work in interior, spatial, and product design, Raseel is renowned for her ability to blend art, design, and heritage seamlessly. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Section -->
+    <section class="design-section text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 position-relative">
+            <video src="assets/House_01.webm"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto" class="design-bg w-100">
+          </video>
+          <div class="design-overlay">
+            <h2 class="custom-text"><span class="custom-subtext satish-label">RGA</span> <span class="reveal-text headline-clip">DESIGN</span> </h2>
+            <span class="custom-subtext design-label show">LLP</span>
+          </div>
+          </div>
+          <div class="col-12 col-md-8 col-lg-6 mx-auto" >
+            <p class="scroll-reveal delay-1 design-subtext mb-5 mt-lg-n8rem">The beating heart of architectural and interior innovation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paradox Section -->
+    <section class="paradox-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="">
+            <div class="paradox-wrapper mx-auto">
+              <video src="assets/Puma Comp.webm"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto" class="paradox-image w-100 h-100">
+            </video>
+              <div class="paradox-text">
+                <span class="custom-subtext  casa-label">CASA</span>
+                <span class="maintext-para homepage-xl-heading reveal-text headline-clip custom-text mt-1">PARADOX</span>
+                <span class="custom-subtext  para-label">LUXE</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8 col-lg-6 mx-auto">
+            <p class="paradox-caption scroll-reveal delay-3">
+              Iconic furniture and bespoke home concepts that fuse Indian heritage with contemporary design
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SATISH GUJRAL SECTION -->
+    <section class="gujral-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+         <div class="col-12 col-lg-10">
+         <div class="gujral-wrapper mx-auto" style="position: relative; height: 500px; overflow: hidden;">
+            <!-- Images -->
+            <img src="assets/bull.png" 
+                alt="Gujral Sculpture" 
+                class="gujral-image w-100" 
+                id="img1"
+                style="position: absolute; left: 0; top: 0; transition: opacity 1s; opacity: 1; z-index: 1;" />
+
+            <img src="assets/satish sir art.png" 
+                alt="Monkey on Couch" 
+                class="gujral-image w-100" 
+                id="img2"
+                style="position: absolute; left: 0; top: 0; transition: opacity 1s; opacity: 0; z-index: 1; border-radius: 4px;" />
+
+            <!-- Text -->
+            <h2 class="gujral-text scroll-reveal position-absolute top-26 top-lg-50 start-50 translate-middle text-center" 
+                style="z-index: 5; pointer-events: none;">
+              <span class="custom-subtext  satish-label">SATISH</span>
+              <span class="custom-text reveal-text headline-clip">GUJRAL</span>
+            </h2>
+          </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const img1 = document.getElementById('img1');
+  const img2 = document.getElementById('img2');
+
+  let showingFirst = true;
+  const intervalTime = 3000; // time each image stays visible (ms)
+  const fadeTime = 1000;     // CSS transition duration (must match in style above)
+
+  function swapImages() {
+    if (showingFirst) {
+      img1.style.opacity = '0';
+      img2.style.opacity = '1';
+    } else {
+      img1.style.opacity = '1';
+      img2.style.opacity = '0';
+    }
+    showingFirst = !showingFirst;
+  }
+
+  // Loop every few seconds
+  setInterval(swapImages, intervalTime + fadeTime);
+});
+</script>
+
+          <div class="col-12 col-md-10 col-lg-8 mx-auto">
+            <p class="gujral-quote scroll-reveal delay-2">
+            "My life's work is a reflection of my journey, my struggles, and my triumphs."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Typewriter JS -->
+   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const quoteEl = document.querySelector('.gujral-quote');
+    if (!quoteEl) return;
+
+    /** SETTINGS **/
+    const settings = {
+      text: quoteEl.textContent.trim(),
+      typeSpeed: 100,       // ms per character typed
+      deleteSpeed: 100,     // ms per character deleted
+      pauseBeforeDelete: 1500, // ms to wait before deleting
+      pauseBeforeType: 500     // ms to wait before typing again
+    };
+
+    // Clear initial text & setup DOM structure
+    quoteEl.textContent = '';
+    const textSpan = document.createElement('span');
+    quoteEl.appendChild(textSpan); // ❌ cursor append नहीं किया
+
+    // Typewriter Logic
+    const typewriter = () => {
+      let i = 0;
+      let deleting = false;
+      const { text, typeSpeed, deleteSpeed, pauseBeforeDelete, pauseBeforeType } = settings;
+
+      function step() {
+        if (!deleting && i < text.length) {
+          textSpan.textContent += text.charAt(i++);
+          setTimeout(step, typeSpeed);
+        } else if (deleting && i > 0) {
+          textSpan.textContent = text.substring(0, --i);
+          setTimeout(step, deleteSpeed);
+        } else if (!deleting && i === text.length) {
+          setTimeout(() => { deleting = true; step(); }, pauseBeforeDelete);
+        } else if (deleting && i === 0) {
+          deleting = false;
+          setTimeout(step, pauseBeforeType);
+        }
+      }
+      step();
+    };
+
+    // Start only when visible
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            typewriter();
+            obs.disconnect(); // start once, loop forever
+          }
+        });
+      }, { threshold: 0.2 });
+      observer.observe(quoteEl);
+    } else {
+      typewriter(); // Fallback for old browsers
+    }
+  });
+</script>
+
+
+    <!-- RGAL ART SECTION -->
+   
+    <section class="art-section">
+      <div class="container-fluid">
+          <div class="row justify-content-center">
+          
+          <div class="col-12 col-lg-10">
+              <div class="art-wrapper mx-auto">
+              <video src="assets/Monkey men.webm"
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="auto"
+                  class="art-image w-100 h-100 p-2">
+              </video>
+              <div class="art-text">
+                  <span class="subtext-rga rgal-label">RGAL</span>
+                  <span class="maintext-art reveal-text headline-clip custom-text2">ART</span>
+              </div>
+              </div>
+          </div>
+
+          <!-- Text moved with margin-top -->
+          <div class="col-12 col-md-8 col-lg-6 mx-auto">
+              <p class="scroll-reveal delay-3 subtext-art text-center">
+              A lens into the artistic legacy and the evolution of Raseel's Art work
+              </p>
+          </div>
+
+          </div>
+      </div>
+    </section>
+
+
+
+    <!-- CASAPOP -->
+    <section class="art-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="art-wrapper mx-auto">
+              <video src="assets/Fish_01_1.webm"
+               autoplay
+               loop
+               muted
+               playsinline
+               preload="auto" class="casa-img mx-auto d-block">
+             </video>
+              <h2 class="art-text position-absolute top-50 start-50 translate-middle">
+                <span class="maintext-art reveal-text headline-clip custom-text2 casapop-font">CASAPOP</span>
+              </h2>
+            </div>
+          </div>
+          <div class="mx-auto">
+            <p class="scroll-reveal delay-3 subtext-arts margin-top-adjust-fish">
+              A playful, maximalist take on modern Indianness
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARZAANI -->
+    <section class="art-section arzaani-section">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="art-wrapper mx-auto">
+              <video src="assets/Sanke.webm"
+               autoplay
+               loop
+               muted
+               playsinline
+               preload="auto" class="casa-img mx-auto d-block">
+             </video>
+              <h2 class="art-text position-absolute top-50 start-50 translate-middle">
+                <span class="maintext-art reveal-text headline-clip custom-text">ARZAANI</span>
+              </h2>
+            </div>
+          </div>
+          <div class="mx-auto">
+            <p class="scroll-reveal delay-3 subtext-art_snake margin-top-adjust-fish">
+              A curated celebration of indigenous luxury and artisanal craft
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+        <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="#">ABOUT</a></li>
+                          <li><a href="#">CONTACT</a></li>
+                          <li><a href="#">AWARDS</a></li>
+                          <li><a href="#">MEDIA</a></li>
+                          <li><a href="#">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                          <p><a href="#">Cookie Policy</a></p>
+                          <p><a href="#">Copyright Policy</a></p>
+                          <p><a href="#">Privacy Policy</a></p>
+                          <p><a href="#">Product Information</a></p>
+                          <p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>
+                          </div>
+                      </div>
+                      </div>
+
+                      <!-- Column 3 -->
+                      <div class="col-6 col-md-12 col-lg-4">
+                      <div class="footer-column">
+                          <div class="social-icons d-flex justify-content-center justify-content-lg-start" style="margin-top:11rem">
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/dribbble.svg" alt="Dribbble"></a>
+                          <a href="#"><img src="https://simpleicons.org/icons/webflow.svg" alt="Webflow"></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+                  <div class="footer-logo position-relative d-inline-block w-100">
+                  RASEE<span id="raseel-l" class="position-relative d-inline-block">
+                  L
+                  <span class="position-absolute butterfly-class">
+                      <video src="assets/Butterfly.webm"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      preload="auto"
+                      class="d-block"
+                      style="width: 24vw; height: auto;">
+                      </video>
+                  </span>
+                  </span>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+        </section>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+  const sidebar = document.getElementById("sidebar");
+  let isAnimating = false;
+
+  function toggleSidebar() {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    if (!sidebar.classList.contains("open")) {
+      // OPEN sidebar
+      sidebar.classList.add("open");
+
+      // 👉 Timeline for smooth sequencing
+      const tl = gsap.timeline({
+        defaults: {ease: "power4.out", duration: 1},
+        onComplete: () => { isAnimating = false; }
+      });
+
+      // Animate text in (wave flow)
+      tl.fromTo(".anim-text",
+        {opacity: 0, scaleX: 0, transformOrigin: "right center"},
+        {
+          opacity: 1,
+          scaleX: 1,
+          stagger: {amount: 0.8, from: "start"}
+        },
+        "+=0.2"
+      );
+
+      // Animate video block AFTER text (👉 right side stretch)
+      tl.fromTo(".video-block",
+        {opacity: 0, scaleX: 0, transformOrigin: "right center"},
+        {opacity: 1, scaleX: 1, duration: 1},
+        "-=0.2"
+      );
+
+    } else {
+      // CLOSE sidebar → reverse order
+      const tl = gsap.timeline({
+        defaults: {ease: "power4.in", duration: 0.8},
+        onComplete: () => {
+          sidebar.classList.remove("open");
+          isAnimating = false;
+        }
+      });
+
+      // First hide video block (👉 right side collapse)
+      tl.to(".video-block", {
+        opacity: 0, scaleX: 0, transformOrigin: "right center"
+      });
+
+      // Then collapse text (reverse stagger)
+      tl.to(".anim-text", {
+        opacity: 0,
+        scaleX: 0,
+        stagger: {amount: 0.6, from: "end"}
+      }, "-=0.2");
+    }
+  }
+</script>
+
+
+
+<script src="home.js"></script>
+</body>
+</html>
