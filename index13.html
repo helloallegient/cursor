@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles1.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+  <title>RGB Website</title>
+  <style> 
+    .award-section{
+      width: 100%;
+      height:100vh;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .award {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .award-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .laurel {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+    .award-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0;
+    }
+    .award-sub {
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+.award {
+  display: inline-block;
+  cursor: pointer;
+  perspective: 800px; /* 3D feel ke liye */
+}
+
+.award-icons {
+  display: flex;
+ 
+  align-items: center;
+  position: relative;
+}
+
+/* SVG Icons */
+.award-icons svg {
+  width: 50px;
+  transform: translateY(0) rotate(0deg);
+  transform-origin: center center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Left icon - downward arc */
+.award:hover .award-icons svg:first-child {
+  transform: translateY(20px) rotate(-20deg);
+}
+
+/* Right icon - downward arc */
+.award:hover .award-icons svg:last-child {
+  transform: translateY(20px) rotate(20deg);
+}
+
+/* Award title & subtitle */
+.award .award-title,
+.award .award-sub {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.5s ease;
+  display: block;
+}
+
+/* Hover effect for text */
+.award:hover .award-title {
+  transform: translateY(-12px);
+  opacity: 1;
+}
+
+.award:hover .award-sub {
+  transform: translateY(-8px);
+  opacity: 0.9;
+}
+
+/* Optional: slight stagger effect */
+.award:hover .award-icons svg:first-child {
+  transition-delay: 0s;
+}
+
+.award:hover .award-icons svg:last-child {
+  transition-delay: 0.05s;
+}
+
+.award:hover .award-title {
+  transition-delay: 0.1s;
+}
+
+.award:hover .award-sub {
+  transition-delay: 0.15s;
+}
+
+
+  </style>
+</head>
+<body>
+    <div class="container-fluid" style="cursor:pointer;  padding:0; margin:0;">
+         <!-- Hero Section -->
+      <section class="hero-section position-relative text-center text-lg-start">
+        <!-- Sticky Header Start -->
+        <header class="sticky-header">
+        <video src="assets/Logo.webm"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="position-relative logo-video mt-5">
+        </video>
+        <div class="hamburger mt-5" onclick="toggleSidebar()">
+            <div class="line">
+                <span><img src="assets/icon.png" alt="icon"></span>
+                <span><img src="assets/icon.png" alt="icon"></span>
+                <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+                <span><img src="assets/icon.png" alt="icon"></span>
+                <span><img src="assets/icon.png" alt="icon"></span>
+                <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+                <span><img src="assets/icon.png" alt="icon"></span>
+                <span><img src="assets/icon.png" alt="icon"></span>
+                <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+        </div>
+        </header>
+        <!-- Sticky Header End -->
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+            <div class="menu">
+                <p>WHO WE ARE</p>
+                <p>WHAT WE DO</p>
+                <p style="color: #fcdde1;">OUR BRANDS</p>
+            </div>
+
+            <div class="services">
+                <div class="branding">
+                    <p>RGA DESIGN LLP</p>
+                    <p>CASA PARADOX LUXE</p>
+                    <p>CASA POP</p>
+                    <p>ARZAANI</p>
+                    <p>RASEEL GUJRAL ART LEGACY</p>
+                    <p>SATISH GUJRAL ART</p>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <p>LET'S CONNECT</p>
+            </div>
+            
+            <div class="video-block">
+                <video autoplay muted loop playsinline width="100%" height="auto">
+                    <source src="assets/ParadoxLuxe.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <!-- Main Heading & Butterfly in Two Columns -->
+        <div class="container mt-5 pt-5">
+              <!-- Top Right Text & Button -->
+            <div class="mt-5 pe-3 pe-md-5" style="max-width: 515px; margin-left: auto;">
+                <p class="hero-sec-des">
+                  When we engage, We co-crate, A design language that’s 
+                  deeply personal and entirely unique.
+                </p>
+                <a href="#" class="btn btn-outline-light  mt-2 hero-sec-btn bg-light">LET’S connect</a>
+            </div>
+   <div class="row align-items-center">
+      <div class="col-lg-8 text-start"> <!-- remove text-center -->
+        <p class="hero-sec-des2 mb-1">Our Brands</p>
+        <div class="hero-container d-flex justify-content-start align-items-start">
+          <div class="hero-headline-wrapper d-flex flex-column align-items-start text-start">
+            <div class="headline-clip one"><div class="hero-heading text-start m-0">Breathe</div></div>
+            <div class="headline-clip two"><div class="hero-heading text-start m-0">The</div></div>
+            <div class="headline-clip three"><div class="hero-heading text-start m-0">India</div></div>
+            <div class="headline-clip four"><div class="hero-heading text-start m-0">Story</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+        <img src="assets/butterfly.png" alt="Butterfly" class="img-fluid tilt-img butterfly-cls">
+      </div>
+   </div>
+
+
+        </div>
+     </section>
+      <!-- Brand Essence -->
+       <!-- <img src="assets/butterfly.png" alt="Moth" class="moth-fixed"> -->
+      <section class="sticky-section" id="brand">
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">Raseel gujral ansal</h2>
+        </div>
+         
+        <div class="content-col">
+          <div class="block">Raseel Gujral Ansal, is a celebrated and innovative force in the world of multi-disciplinary design for close to four decades and brings her unparalleled expertise and artistic vision to each exploration. 
+          Known for her pioneering work in interior, spatial, and product design, Raseel is renowned for her ability to blend art, design, and heritage seamlessly.</div>
+          <!-- <div class="block">Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design for close to four decades, brings her unparalleled.</div>
+          <div class="block">Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design. </div> -->
+        </div>
+      </section>
+
+      <!-- The Mission -->
+      <section class="sticky-section" id="mission">
+          
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">The Mission</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">At Raseel Gujral Ansal, our mission is to shape a dialogue between heritage and modernity—through spaces, objects, and experiences that celebrate Indian soul with global sophistication.
+          We strive to reframe artisanal legacy as contemporary luxury, honouring craftsmanship, storytelling, and cultural provenance in every creation. Guided by intuition, artistry, and innovation, we design with purpose to evoke emotion, elevate everyday beauty, and inspire a more connected world of design.
+       </div>
+          <!-- <div class="block">Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design for close to four decades, brings her unparalleled</div>
+        </div> -->
+      </section>
+
+            <!-- The Vision -->
+      <section class="sticky-section" id="mission">
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">The Vision</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">To be a timeless force in design that reclaims and reimagines India’s artistic legacy for a global stage.
+            We envision a world where craftsmanship is revered, spaces speak of soul, and design becomes a vessel for cultural continuity, creative freedom, and emotional resonance. Through our work, we aspire to nurture  living traditions rooted in memory, layered with meaning and ever evolving.
+        </div>
+          <!-- <div class="block">Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design for close to four decades, brings her unparalleled</div>
+        </div> -->
+      </section>
+      <!-- The Values -->
+      <section class="names-section">
+        <div class="small-subhead">We are multidisciplinary</div>
+        <div class="names-list-clip" id="namesClip">
+          <div class="names-list" id="namesList">
+            <div class="names-item">eccentric</div>
+            <div class="names-item">glamourous</div>
+            <div class="names-item">Creative</div>
+            <div class="names-item">Refined</div>
+            <div class="names-item">Modern</div>
+            <div class="names-item">Confident</div>
+            <div class="names-item">Innovative</div>
+            <div class="names-item">luxury</div>
+            <div class="names-item">Pattern-rich</div>
+            <div class="names-item">india proud</div>
+            <div class="names-item">Abstract</div>
+            <div class="names-item">cult</div>
+            <div class="names-item">timeless</div>
+          </div>
+        </div>
+     </section>
+
+     <!-- Hero Fish Section -->
+    <section class="hero-fish d-flex align-items-center justify-content-center">
+      <div class="container text-center position-relative">
+
+        <!-- Heading -->
+        <h1 class="hero-headfishing-wrapper">
+          <span>BEYOND</span><br>
+          <span>THE USUAL</span>
+        </h1>
+
+        <!-- Fish Video -->
+        <video src="assets/Fish_01_1.webm"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+              class="hero-fish-video mx-auto d-block">
+        </video>
+
+        
+      <!-- Founder Video Section inside hero -->
+      <div class="founder-video-section">
+        <div class="founder-video-box">
+          <video autoplay muted loop playsinline id="founderVideo">
+            <source src="Screen-Recording.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Circle Play Button -->
+          <div class="play-button" id="playPauseBtn">
+            <svg viewBox="0 0 64 64">
+              <polygon points="16,12 16,52 48,32" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      </div>
+   </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <h1>SERVICES</h1>
+        <p class="services-subtext">SPATIAL DESIGN | BESPOKE FURNITURE | ART | COLLECTIBLES | HOME ACCENTS</p>
+
+        <div class="services-btns">
+          <a href="#" class="btn btn-light text-dark">OUR SERVICES</a>
+          <a href="#" class="btn btn-outline-light">CONNECT</a>
+        </div>
+
+        <!-- Koi fishes -->
+        <img src="assets/koi-black.png" alt="Koi Black" class="koi koi1">
+        <img src="assets/koi-red.png" alt="Koi Red" class="koi koi2">
+        <img src="assets/koi-orange.png" alt="Koi Orange" class="koi koi3">
+   </section>
+
+   <!-- Dialogue Section -->
+  <section class="dialogue-section container-fluid">  
+      <div class="row justify-content-between ps-5">
+        
+    <!-- Left Section -->
+    <div class="col-md-4 text-md-start text-center mb-4">
+      <h2 class="left-title">
+        A <br>
+        Dialogue <br>
+        With <br>
+        Identity
+      </h2>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-md-7">
+      <p class="section-heading">Standing between worlds yet fully rooted in both</p>
+      <p class="section-heading">Design as mirror, not mask</p>
+      <p class="section-heading">An ongoing interplay between inheritance and reinvention</p>
+      <p class="section-heading">A spiritual geometry that underlies every spatial experience</p>
+
+      <p class="content-text">
+        Raseel Gujral Ansal embodies a refined balance between art, architecture, and artisanal luxury. 
+        Her brand is a mirror of duality rooted in heritage and expressed through contemporary design. 
+        Each creation is a journey through cultural memory, sacred geometry, and modern form, 
+        expressing a distinctive dialogue between inner essence and outward experience.
+      </p>
+
+      <p class="content-text">
+        The design ethos is rooted in paradox where structure meets spontaneity, and traditional symbolism 
+        merges with cutting-edge modernism. Her practice is immersive and intuitive, blending storytelling, 
+        spatial rhythm, and tactile richness. She views design not merely as a product, but as an evolving 
+        narrative shaped by material, light, and memory.
+      </p>
+    </div>
+  </div>
+  </section>
+
+
+
+
+    <!-- Founder Section -->
+    <section class="founder-section container-fluid p-0">
+      <div class="row g-0 position-relative">
+        
+        <!-- Left Side -->
+        <div class="col-md-6 founder-left d-flex flex-column justify-content-center align-items-start p-5 text-white">
+          <h2 class="founder-name">Raseel<br>Gujral<br>Ansal</h2>
+          <p class="founder-role">Founder</p>
+        </div>
+
+        <!-- Right Side (Pink Background only) -->
+        <div class="col-md-6 founder-right"></div>
+
+        <!-- Founder Image (Overlap Both Sides) -->
+        <img src="assets/ma'am.png" alt="Founder" class="founder-img">
+      </div>
+
+      <!-- Quote Section -->
+      <div class="row g-0">
+        <div class="col-12 text-center text-white py-5 founder-quote">
+          <p>
+            <span class="script-text">
+              Duality as Truth. Light and shadow. Seen and unseen. Control and surrender. 
+            </span><br>
+            <span class="script-text">
+              This vertical division speaks to the eternal paradox at the core of our work.
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- Founder Section - Navin Ansal -->
+      <section class="founder-section-navin">
+        <!-- Left half (Pink) -->
+        <div class="half pink"></div>
+
+        <!-- Right half (Black with text) -->
+        <div class="half black">
+          <div class="text-box">
+            <h2>NAVIN<br>ANSAL</h2>
+            <p>Founder</p>
+          </div>
+        </div>
+
+        <!-- Founder Image -->
+        <img src="assets/navin ansal.png" alt="Navin Ansal" class="founder-image">
+      </section>
+
+<!-- Award section -->
+    <section class="award-section" style="background-color: white;">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+
+            <!-- 1 -->
+            <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Winner</h6>
+                  <h6 class="award-title">Interior Design</h6>
+                  <h6 class="award-title">Private Residence</h6>
+                  <p class="award-sub">Asia Pacific Property</p>
+                  <p class="award-sub">Award 2020</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">The luxury</h6>
+                  <h6 class="award-title">Symposium</h6>
+                  <h6 class="award-title">2018</h6>
+                  <p class="award-sub">The Luxury </p>
+                  <p class="award-sub">League Award </p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+            <!-- 3 -->
+              <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Winner</h6>
+                  <h6 class="award-title">Townhouse</h6>
+                  <h6 class="award-title">Project</h6>
+                  <p class="award-sub">iDOGI Award</p>
+                  <p class="award-sub">2018</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Excellence in</h6>
+                  <h6 class="award-title">Architecture &</h6>
+                  <h6 class="award-title">Design</h6>
+                  <p class="award-sub">iDOGI Awards </p>
+                  <p class="award-sub">2016 </p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+            <!-- 5 -->
+              <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">NDTV Design &</h6>
+                   <h6 class="award-title">Architect of </h6>
+                    <h6 class="award-title">the year</h6>
+                  <p class="award-sub">Autodesk Award</p>
+                  <p class="award-sub">2016</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+            <!-- 6 -->
+            <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">The most Influential</h6>
+                  <h6 class="award-title">name in Indian</h6>
+                  <h6 class="award-title">Architecture & Design</h6>
+                  <p class="award-sub">AD Award </p>
+                  <p class="award-sub">2014</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 7 -->
+          <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Outstanding</h6>
+                  <h6 class="award-title">Woman Achiever</h6>
+                  <p class="award-sub">FICCI FLO Award</p>
+                  <p class="award-sub">2014</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+            <!-- 8 -->
+          <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Highly</h6>
+                  <h6 class="award-title">Commended Award</h6>
+                  <p class="award-sub">Asia Pacific Property</p>
+                  <p class="award-sub">Award 2014</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+            <!-- 9 -->
+          <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Luxury Home</h6>
+                  <h6 class="award-title">Retailer Award</h6>
+                  <p class="award-sub">Magppi</p>
+                  <p class="award-sub">Indian Home Award 2012</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+            <!-- 10 -->
+          <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Designer of </h6>
+                  <h6 class="award-title">the Year Award </h6>
+                  <p class="award-sub">ELLE Deco</p>
+                  <p class="award-sub">2011</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 11 -->
+              <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Building Industry</h6>
+                  <h6 class="award-title">Leadership Award</h6>
+                  <p class="award-sub">Builder Information</p>
+                  <p class="award-sub">Bureau 2007</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 12 -->
+              <div class="col-6 col-md-4 col-lg-3 award">
+              <div class="award-icons">
+                <svg id="uuid-ec90ef5c-e1b8-4944-b6d0-55dcde8cc8a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.12">
+                    <g id="uuid-9c2e4652-701f-4cfa-96fd-559e2079a6db" data-name="Layer 1">
+                        <g id="uuid-87efd3f3-6b58-44ef-ba45-56b9fd1fa7b0" data-name="Badge">
+                        <path d="M10.44,23.85l1.8-4.14c-2.71-3.35-2.36-8.95-.54-12.65.11-.23.75-1.5,1.02-1.31,1.44,2.56,2,5.52,1.81,8.46-.04.67-.25,1.31-.31,1.97l2.8-3.8c-.1-.7-.5-1.32-.65-2.06-.68-3.41.94-7.66,3.36-10.07,1,2.1.9,4.59.48,6.83l-.84,2.75,1.94-1.71C22.59,3.45,27.86.28,32.5,0c-1.7,4.25-5.78,8.21-10.55,8.45l-2.28,2.16c.55-.01,1.07-.4,1.58-.57,2.62-.86,5.38-.94,8.01-.08.12.13-.43.62-.54.72-2.53,2.38-7.78,3.91-11.02,2.29l-2.59,3.64,2.28-.96c2.83-.87,5.76-.61,8.51.42.17.24-1.06,1.04-1.28,1.17-2.85,1.74-7.27,2.62-10.29.88-.33.03-2.57,5.33-2.69,6.1,2.66-3.01,7.35-4.51,11.27-3.66-2.58,3.55-7.29,6.05-11.73,5.11-.58,2.11-1.06,4.27-1.21,6.46l1.2-1.61c2.23-2.36,5.13-3.7,8.34-4.13.18-.02.2-.02.17.17-.11.75-1.3,2.47-1.8,3.11-1.88,2.39-5,4.57-8.15,4.5-.06,2.49.05,4.97.36,7.43l1.3-3.08c1.69-2.67,4.24-5.13,7.33-6.03-.34,4.53-3.6,9.65-8.15,10.84l-.11.14c.51,2.08,1,4.53,1.91,6.46.06.12.07.28.24.3.07-3.67,2.3-7.53,5.03-9.89.23-.2,1.99-1.56,2.16-1.38.26,4.88-1.79,10.91-6.47,13.07.99,2.16,2.21,4.26,3.71,6.11-.78-4.78,1.12-10.17,4.67-13.42,1.63,5,.89,11.58-3.18,15.22-.07.16,1.27,1.62,1.5,1.86,1.61,1.64,3.51,3.18,5.4,4.49-.42-.89-.91-1.73-1.23-2.66-1.24-3.64-1.07-8.68.42-12.23.06-.14.55-1.26.69-1.17,1.39,1.97,2.49,4.09,3.08,6.45.88,3.48,1.03,7.67-1.03,10.77l.04.16c2.29,1.4,4.68,2.68,7.26,3.47-1.13-1.17-2.09-2.53-2.74-4.03-1.39-3.2-1.92-8.01-.84-11.36.05-.15.06-.53.29-.43.12.05,1.21,1.18,1.38,1.38,3.23,3.76,5.35,10.18,3.29,14.92,3.03,1.1,6.25,1.7,9.46,1.93l.14.1-.07,2.17c-2.43-.32-4.86-.62-7.25-1.2-.21.03-1.34,1.4-1.68,1.68-3.18,2.7-9.06,3.48-13.01,2.45-.25-.07-1.38-.29-1.32-.6.02-.11,1.07-.99,1.26-1.14,2.16-1.74,5.41-3.1,8.16-3.46l2.56-.26c-1.53-.39-2.95-1.1-4.38-1.76-3.1,2.75-7.54,2.98-11.45,2.18-1.68-.34-3.55-.99-4.91-2.04,2.78-1.91,6.65-2.78,10.01-2.58.71.04,1.48.22,2.18.33.1.02.37.12.21-.09l-3.6-2.52c-.68.26-1.3.67-2,.88-4.54,1.38-10.47-.54-13.88-3.69,4.14-1.86,9.13-1.51,13.18.42l-3.12-3.42c-.34-.15-.7.1-1.05.15-4.84.7-10.05-2.62-12.61-6.56,3.95-.57,8.11.63,11.21,3.11.09.02.08-.12.06-.18-.19-.45-.82-1.27-1.1-1.78-.35-.64-.66-1.31-.96-1.98-4.02.31-7.84-2.74-10.03-5.86-.58-.83-1.46-2.26-1.68-3.24-.05-.2-.1-.29.16-.28,2.77.17,6.6,2.22,8.57,4.14l1.32,1.5-1.26-4.79c-.1-.17-1.34-.44-1.7-.58C3.94,43.19-.05,37.31.01,33.5c0-.18-.08-.34.17-.29,2.2.46,5.45,3.44,6.77,5.22l1.58,2.68-.25-5.26c-2.74-.96-4.58-3.73-5.59-6.34-.85-2.22-1.36-4.75-.93-7.1,2.87,1.84,5.12,4.66,6.26,7.88.21.59.28,1.15.45,1.71.04.11.02.27.18.24l.85-4.95c-3.98-2.84-4.74-9.33-3.06-13.63,1.74,1.72,3.02,4.07,3.62,6.44.11.43.39,1.51.39,1.88v1.86Z" fill="currentcolor"></path>
+                        </g>
+                    </g>
+                </svg>
+                <div>
+                  <h6 class="award-title">Women of </h6>
+                  <h6 class="award-title">the Year Awards</h6>
+                  <h6 class="award-title">2002</h6>
+                  <p class="award-sub">Asia Pacific Property</p>
+                  <p class="award-sub">Award 2020</p>
+                </div>
+                        <svg id="uuid-634fd6b6-ca16-47ea-923b-8179cc8e75f6" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.63 79.11">
+                    <g id="uuid-40b405a6-b131-40c1-af85-ecad0bd3e642" data-name="Layer 1">
+                        <path d="M35.19,21.87c.27-2.81,2.02-6.23,4.02-8.21,1.67,4.3.91,10.78-3.06,13.63l.85,4.95c.17.03.17-.21.2-.33.1-.35.13-.71.25-1.07,1.08-3.44,3.41-6.49,6.44-8.42.43,2.36-.08,4.88-.93,7.1-.99,2.58-2.87,5.41-5.59,6.34l-.25,5.26,1.58-2.68c1.3-1.8,4.59-4.76,6.77-5.22.25-.05.17.11.17.29.05,2.99-2.74,7.61-4.98,9.53-1.23,1.05-2.59,1.7-4.15,2.11l-1.31,4.83,1.32-1.5c1.97-1.9,5.81-3.97,8.57-4.14.26-.01.2.07.16.28-.22.97-1.1,2.41-1.68,3.24-2.18,3.12-6,6.16-10.03,5.86-.3.66-.61,1.34-.96,1.98-.28.51-.91,1.32-1.1,1.78-.02.05-.03.2.06.18,3.09-2.49,7.27-3.69,11.21-3.11-1.31,2.06-3.25,3.8-5.39,4.98-2.26,1.25-4.62,1.96-7.22,1.58-.35-.05-.71-.3-1.05-.15l-3,3.3c1.16-.4,2.27-.88,3.47-1.14,3.13-.66,6.67-.52,9.59.84-4.06,3.64-10.85,5.6-15.88,2.81l-3.6,2.52c-.15.21.11.11.21.09.7-.11,1.48-.29,2.18-.33,3.36-.2,7.23.68,10.01,2.58-1.36,1.05-3.24,1.7-4.91,2.04-3.91.8-8.35.57-11.45-2.18-1.42.66-2.85,1.38-4.38,1.76-.03.21.27.11.42.12,4.42.16,8.55,1.68,11.69,4.86-4.31,1.65-10.86,1.07-14.45-1.98-.6-.51-1.07-1.23-1.68-1.68-2.39.57-4.81.89-7.25,1.2l-.07-2.17.14-.1c3.2-.17,6.33-.93,9.39-1.82-.15-.9-.54-1.68-.68-2.61-.61-4.05,1.4-9.35,4.05-12.43.17-.2,1.26-1.33,1.38-1.38.19-.08.16.06.2.15.15.32.36,1.24.42,1.62.8,4.81-.41,10.54-3.92,14.05,2.57-.8,4.98-2.06,7.26-3.47l.04-.16c-.7-1.01-1.17-2.2-1.39-3.41-.88-4.76.62-9.96,3.44-13.81.16-.11.86,1.58.93,1.77,1.37,3.79,1.39,8.86-.19,12.58-.25.59-.62,1.12-.86,1.72,1.82-1.28,3.72-2.77,5.28-4.37.25-.25,1.69-1.82,1.62-1.98-4.07-3.64-4.81-10.22-3.18-15.22,3.55,3.27,5.46,8.63,4.67,13.42,1.51-1.85,2.73-3.95,3.71-6.11-4.69-2.15-6.73-8.18-6.47-13.07,1.37.54,2.7,1.76,3.66,2.87,1.95,2.25,3.5,5.37,3.54,8.39.26-.13.35-.55.45-.81.75-1.9,1.26-3.96,1.72-5.95-4.61-1.4-7.92-6.28-8.28-10.98,3.08.9,5.64,3.37,7.33,6.03l1.3,3.08c.31-2.47.42-4.94.36-7.43-3.14.08-6.27-2.12-8.15-4.5-.5-.64-1.69-2.37-1.8-3.11-.03-.19,0-.2.17-.17,3.21.44,6.1,1.77,8.34,4.13l1.2,1.61c-.15-2.19-.63-4.35-1.21-6.46-.17-.12-1.18.2-1.49.22-3.72.29-8.17-2.33-10.25-5.33,3.92-.85,8.6.65,11.27,3.66-.12-.77-2.36-6.07-2.69-6.1-3.04,1.75-7.42.86-10.29-.87-.21-.12-1.49-.94-1.28-1.17,2.64-.98,5.4-1.26,8.15-.54l2.64,1.08-2.59-3.64c-3.24,1.61-8.48.09-11.02-2.29-.12-.11-.65-.58-.54-.72,2.62-.86,5.4-.77,8,.08.52.17,1.03.56,1.58.57l-2.28-2.16c-4.77-.24-8.84-4.2-10.55-8.45,4.64.28,9.91,3.45,11.18,8.11l1.94,1.71-.82-2.66c-.46-2.26-.54-4.81.46-6.93,2.4,2.42,4.04,6.66,3.36,10.07-.15.74-.55,1.36-.65,2.06l2.8,3.8c-.05-.66-.26-1.3-.31-1.97-.19-2.93.36-5.89,1.81-8.46.25-.17.83.94.94,1.15,1.91,3.69,2.27,9.43-.46,12.81l1.8,4.14c.04-.64-.06-1.35,0-1.98Z" fill="currentcolor"></path>
+                    </g>
+                </svg>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+    </section>
+
+<!-- ===== prefooter Section ===== -->
+
+          <div class="slide-container" id="slideContainer">
+              <!-- Slide 1 - Let's Get Started -->
+              <div class="slide slide-1">
+                  <!-- Large gray circle background -->
+                  <!-- <div class="bg-circle"></div> -->
+                  
+                  <div class="slide-content">
+                      <h1 class="main-title">
+                          LET'S<br>
+                          begin<br>
+                          a dialogue
+                      </h1>
+                      <div class="description-container">
+                      <p class="description">
+                          Ready to turn your vision into something real? So are we.
+                        </p> 
+                      </div>
+                      <div class="description-container">
+              
+                          <p class="description">
+                            Share your contact information and we’ll get back to you to discuss next steps.
+                          </p>
+                      </div>
+                  </div>
+                  <!-- Replace your existing icon wrapper with this -->
+                    <div
+                      class="nav-arrow prefooter-icon-clip"
+                      role="button"
+                      aria-label="Next slide"
+                      tabindex="0"
+                      onclick="slideToNext()"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+                    >
+                      <div class="prefooter-icon" aria-hidden="true">
+                        <!-- default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+
+                        <!-- hover state -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+
+              </div>
+              
+              <!-- Slide 2 - Ask for Callback -->
+            <div class="slide slide-2">
+              <!-- Left Arrow -->
+                  <div
+                    class="nav-arrow prefooter-icon-clip-left"
+                    role="button"
+                    aria-label="Previous slide"
+                    tabindex="0"
+                    onclick="slideToFirst()"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+                  >
+                        <div class="prefooter-icons" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                            <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                            <g>
+                              <line class="prefooter-arrow" x1="50" y1="30" x2="10" y2="30"></line>
+                              <polyline class="prefooter-arrow" points="25,10 10,30 25,50"></polyline>
+                            </g>
+                          </svg>
+                        </div>
+                  </div>
+
+                  <!-- Right Form -->
+                  <div class="form-section">
+                    <h2 class="form-title">ASK FOR A CALL BACK</h2>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="eg. xyz">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Number</label>
+                          <input type="tel" class="form-control" placeholder="987654321">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+          
+
+        </div>
+
+      
+   <!-- Footer -->
+        <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="#">ABOUT</a></li>
+                          <li><a href="#">CONTACT</a></li>
+                          <li><a href="#">AWARDS</a></li>
+                          <li><a href="#">MEDIA</a></li>
+                          <li><a href="#">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                          <p><a href="#">Cookie Policy</a></p>
+                          <p><a href="#">Copyright Policy</a></p>
+                          <p><a href="#">Privacy Policy</a></p>
+                          <p><a href="#">Product Information</a></p>
+                          <p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>
+                          </div>
+                      </div>
+                      </div>
+
+                      <!-- Column 3 -->
+                      <div class="col-6 col-md-12 col-lg-4">
+                      <div class="footer-column">
+                          <div class="social-icons d-flex justify-content-center justify-content-lg-start" style="margin-top:11rem">
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/dribbble.svg" alt="Dribbble"></a>
+                          <a href="#"><img src="https://simpleicons.org/icons/webflow.svg" alt="Webflow"></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+                  <div class="footer-logo position-relative d-inline-block w-100">
+                  RASEE<span id="raseel-l" class="position-relative d-inline-block">
+                  L
+                  <span class="position-absolute butterfly-class">
+                      <video src="assets/Butterfly.webm"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      preload="auto"
+                      class="d-block"
+                      style="width: 24vw; height: auto;">
+                      </video>
+                  </span>
+                  </span>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+        </section>
+  </div>
+  
+    <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+   
+
+
+ <script>
+  // hero section animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  // ✅ हर refresh/init पर baseline reset
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  // One
+  gsap.to(".headline-clip.one", {
+    x: "-25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "top 80%",
+      end: "bottom top",
+      scrub: 0.9
+    }
+  });
+
+  // Two
+  gsap.to(".headline-clip.two", {
+    x: "50vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1
+    }
+  });
+
+  // Three
+  gsap.to(".headline-clip.three", {
+    x: "25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1.2
+    }
+  });
+
+  // Four
+  gsap.to(".headline-clip.four", {
+    x: "-10vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "top 80%",
+      end: "bottom top",
+      scrub: 0.8
+    }
+  });
+</script>
+
+<!-- gsap scroll trigger-->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".content-col .block").forEach((block) => {
+      gsap.to(block, {
+        scrollTrigger: {
+          trigger: block,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+  </script>
+<!-- name section js -->
+   <script>
+   
+  gsap.registerPlugin(ScrollTrigger);
+
+  const namesList = document.querySelector("#namesList");
+  const items = gsap.utils.toArray(".names-item");
+  const itemHeight = items[0].offsetHeight;
+
+  gsap.to(namesList, {
+    y: () => -(items.length - 1) * itemHeight,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".names-section",
+      start: "top top",           // start when section hits top
+      end: "+=" + (items.length * itemHeight),
+      scrub: true,
+      pin: true,                  // keeps section pinned
+      anticipatePin: 1
+    }
+  });
+
+  </script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+const video = document.getElementById('founderVideo');
+const btn = document.getElementById('playPauseBtn');
+
+// Play / Pause toggle
+btn.addEventListener('click', () => {
+  if(video.paused){
+    video.play();
+    btn.style.display = 'none';
+  } else {
+    video.pause();
+    btn.style.display = 'flex';
+  }
+});
+
+// Expand animation
+// Expand animation (only height grows)
+gsap.to(".founder-video-box", {
+  height: "100vh",   // only height expands
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".founder-video-section",
+    start: "top center",   // starts when section enters
+    end: "bottom top",     // ends when leaving
+    scrub: true
+  }
+});
+
+</script>
+
+ <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+<!-- =================== END PREFOOTER (Poison-style) =================== -->
+
+
+
+<script src="scripts.js"></script>
+</body>
+</html>
