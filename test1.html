@@ -1,0 +1,115 @@
+ 
+      <!-- Right Icon Dots Image -->
+      <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon">A</span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+        <div class="line">
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+          <span><img src="assets/icon.png" alt="icon"></span>
+        </div>
+      </div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+  <div class="menu">
+    <p class="anim-text" id="whoWeAre">WHO WE ARE</p>
+    <p class="anim-text">WHAT WE DO</p>
+    <p class="anim-text">OUR BRANDS</p>
+  </div>
+
+  <div class="services" id="servicesBlock">
+    <div class="branding">
+      <p class="anim-text">RGA DESIGN LLP</p>
+      <p class="anim-text">CASA PARADOX LUXE</p>
+      <p class="anim-text">CASA POP</p>
+      <p class="anim-text">ARZAANI</p>
+      <p class="anim-text">RASEEL GUJRAL ART LEGACY</p>
+      <p class="anim-text">SATISH GUJRAL ART</p>
+    </div>
+  </div>
+
+  <div class="menu">
+    <p class="anim-text">LET'S CONNECT</p>
+  </div>
+
+  <div class="video-block">
+    <video autoplay muted loop playsinline width="100%" height="auto">
+      <source src="assets/ParadoxLuxe.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- ✅ CSS -->
+<!-- ✅ CSS -->
+<style>
+  #servicesBlock {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  #servicesBlock.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #whoWeAre {
+    cursor: pointer;
+  }
+</style>
+
+
+<!-- ✅ JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const who = document.getElementById("whoWeAre");
+  const services = document.getElementById("servicesBlock");
+
+  if (!who || !services) return;
+
+  // helper: open block smoothly
+  function openBlock(el) {
+    el.style.maxHeight = el.scrollHeight + "px"; // auto height
+    el.classList.add("active");
+  }
+
+  // helper: close block smoothly
+  function closeBlock(el) {
+    el.style.maxHeight = "0px";
+    el.classList.remove("active");
+  }
+
+  // toggle function
+  function toggleBlock(el) {
+    if (el.classList.contains("active")) {
+      closeBlock(el);
+    } else {
+      openBlock(el);
+    }
+  }
+
+  // hover → open (but stays open)
+  who.addEventListener("mouseenter", function () {
+    openBlock(services);
+  });
+
+  // click → toggle
+  who.addEventListener("click", function () {
+    toggleBlock(services);
+  });
+});
+</script>
