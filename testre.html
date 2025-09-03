@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradox</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+    }
+
+    .paradox-title {
+      position: relative;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .paradox-title-primary {
+    position: absolute;
+    top: -0.6em;
+    left: 0;
+    font-size: clamp(12px, 2vw, 24px);
+    color: #d9a8a8;
+    }
+
+    .paradox-title-secondary {
+      font-size: clamp(24px, 8vw, 100px);
+      color: #000;
+      display: inline-block;
+    }
+.paradox-title-tertiary {
+    position: absolute;
+    bottom: -0.6em;
+    right: 0;
+    font-size: clamp(12px, 2vw, 24px);
+    color: #d9a8a8;
+}
+  </style>
+</head>
+<body>
+  <h2 class="paradox-title">
+    <span class="paradox-title-primary">CASA</span>
+    <span class="paradox-title-secondary">PARADOX</span>
+    <span class="paradox-title-tertiary">LUXE</span>
+  </h2>
+</body>
+</html>
