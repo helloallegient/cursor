@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to AppAutom8 – AI Agents for Smarter Business</title>
+  
+   <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Font (Montserrat) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  
+  
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      /* background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%); */
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .coming-wrapper {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .coming-wrapper img {
+      max-width: 100%;
+      height: auto;
+      animation: float 3s ease-in-out infinite;
+    }
+
+   .text-grayish {
+      font-size: 4.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #6c757d, #495057, #adb5bd);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 6s ease infinite;
+      text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* soft depth only */
+    }
+
+    /* Highlight */
+    .highlight {
+      background: linear-gradient(90deg, #212529, #495057, #adb5bd);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 8s ease infinite;
+      /* Professional subtle shadow */
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .premium-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4.9rem;
+      text-transform: capitalize;
+    /* Metallic silver from the screenshot */
+      background: linear-gradient(
+      180deg,
+      #B1B1B1 0%,
+      #D0D0D0 18%,
+      #9E9E9E 50%,
+      #BEBEBE 82%,
+      #A9A9A9 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      /* Depth Shadow */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.35), 0 6px 14px rgba(0,0,0,0.25);
+
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Taglines */
+    .tagline {
+      font-size: 2rem;
+      color: #495057;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .launching {
+      font-size: 1.4rem;
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    /* Animations */
+    .animate-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1.2s ease forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .text-grayish {
+        font-size: 2.5rem;
+      }
+      .tagline {
+        font-size: 1.2rem;
+      }
+    }
+    .coming-wrapper {
+    text-align: center;
+    padding: 2rem;
+    margin-top: -2rem; /* Adjust this value as needed */
+    }
+
+
+
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  /* Metallic Gray Gradient Button */
+  background: linear-gradient(135deg, #3a3a3a, #6e6e6e, #8c8c8c);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  /* Professional Metallic Shadow */
+  box-shadow: 0 4px 12px rgba(40, 40, 40, 0.7),
+              0 0 20px rgba(160, 160, 160, 0.5);
+
+  animation: pulse 4s ease-in-out infinite; /* slower breathing effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+/* WhatsApp Icon Gradient */
+.whatsapp-float i {
+  background: linear-gradient(135deg, #d9d9d9, #f5f5f5, #a6a6a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(30, 30, 30, 0.85),
+              0 0 35px rgba(200, 200, 200, 0.65);
+}
+
+@keyframes pulse {
+  0% { 
+    box-shadow: 0 4px 12px rgba(40, 40, 40, 0.7),
+                0 0 15px rgba(140, 140, 140, 0.4); 
+  }
+  50% { 
+    box-shadow: 0 6px 22px rgba(30, 30, 30, 0.85),
+                0 0 40px rgba(200, 200, 200, 0.65); 
+  }
+  100% { 
+    box-shadow: 0 4px 12px rgba(40, 40, 40, 0.7),
+                0 0 15px rgba(140, 140, 140, 0.4); 
+  }
+}
+
+
+
+
+/* Glowing pulse animation */
+/* @keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(37, 211, 102, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  }
+} */
+
+  </style>
+</head>
+<body>
+
+<!-- Chatbot -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="coming-wrapper mt-3">
+          
+          <!-- Heading -->
+          <h1 class="mb-3">
+            <span class="premium-text">AI AppAutomation</span>
+          </h1>
+
+          <!-- Taglines -->
+          <h3 class="tagline animate-fade text-grayish" style="animation-delay:0.3s">AI Agents for Smarter Business</h3>
+          <h4 class="launching animate-fade" style="animation-delay:0.6s">We are launching soon 🚀</h4>
+
+          <!-- Hero Image -->
+          <div class="mt-4">
+           <img src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/assets/img/illustrations/boy-with-rocket-light.png" 
+               alt="Launching Soon">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+   <a href="https://wa.me/918210896121" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp" 
+   data-bs-toggle="tooltip" 
+   data-bs-placement="left" 
+   title="Chat with us">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+
+</body>
+</html>
