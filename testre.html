@@ -1,53 +1,922 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paradox</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-    }
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+   <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="tastre.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>demo</title>
+  <style> 
+  
 
-    .paradox-title {
-      position: relative;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      text-align: center;
-    }
 
-    .paradox-title-primary {
-    position: absolute;
-    top: -0.6em;
-    left: 0;
-    font-size: clamp(12px, 2vw, 24px);
-    color: #d9a8a8;
-    }
+/* aniamtion text */
+ .headline-clip {
+  overflow: hidden; /* hides the text until it reveals */
+  display: inline-block;
+}
 
-    .paradox-title-secondary {
-      font-size: clamp(24px, 8vw, 100px);
-      color: #000;
-      display: inline-block;
-    }
-.paradox-title-tertiary {
-    position: absolute;
-    bottom: -0.6em;
-    right: 0;
-    font-size: clamp(12px, 2vw, 24px);
-    color: #d9a8a8;
+.hero-sec-liv {
+    width: 100%;
+    max-width: clamp(390px, 50vw, 500px);
+    font-family: "MiedingerBold";
+    font-size: 1.25rem;
+    line-height: normal;
+    margin-bottom: var(--spacing-xs);
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 36px */
+  
+}
+/* Default (mobile pe normal flow) */
+.hero-sec-liv {
+  text-align: center;   /* ya jo bhi default hai */
+  position: static;
+  margin-bottom: 1rem;
+}
+
+/* ✅ Laptop & Desktop */
+@media (min-width: 992px) {
+  .sticky-section {
+    position: relative;
+  }
+
+  .hero-sec-liv {
+         position: absolute;
+        top: 2rem;
+        right: 10rem;
+        margin: 0;
+        text-align: right;
+        width: auto;    /* sirf text jitna width */
+  }
+}
+
+.sections-wrapper {
+  position: relative; /* reference for fish-img */
+}
+
+.sticky-section {
+  background: #f2f2f2;
+  position: relative;
+  z-index: 1;
+}
+
+.names-section {
+  background: #120000;
+  position: relative;
+  z-index: 1;
+}
+
+.fish-img {
+  position: absolute;
+  top: 0;                 /* names-section ke top */
+  left: 0;
+  transform: translateY(-50%); /* half-half overlap */
+  width: 200px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+}
+
+
+.our-brands-heading {
+font-size: 100px;     /* large heading */
+text-transform: uppercase;
+color: #F2CDCF;
+text-align: center;
+font-family:"MiedingerBold";
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 36px */
+}
+@media (max-width: 768px) {
+  .fish-img {
+    width: 80px;    /* smaller fish on mobile */
+  }
+
+  .our-brands-heading {
+    font-size: 2.2rem;
+  }
+
+}
+
+
+.video-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;      /* keeps uniform size */
+  background: #111;        /* fallback background */
+  overflow: hidden;
+  border-radius: 12px;     /* optional smooth corners */
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills container without black bars */
+  display: block;
+}
+
+
+
+.brands-section {
+  position: relative;
+  z-index: 1;
+  background: #000; /* Black background */
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* 🔥 Brands Section with Parallax Eagle */
+.brands-section {
+  position: relative;
+  z-index: 1;
+  background: #000;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  /* ✅ Eagle Parallax Background */
+  background: url('assets/whatwedo/elements/eagle.png') no-repeat center top;
+  background-size: contain;
+  background-attachment: fixed; /* 👈 Parallax effect for desktop/laptop */
+}
+
+/* 🟢 Mobile Fallback (iOS/Android browsers don't support background-attachment: fixed well) */
+@media (max-width: 767px) {
+  .brands-section {
+    background-attachment: scroll; /* ✅ Normal scroll background on mobile */
+    background-size: cover;        /* Mobile ke liye thoda fill karne ke liye */
+    background-position: center;   /* Centered image */
+  }
+}
+
+
+/* Brand Cards */
+.brand-card {
+  width: 338px;
+  height: 630px;
+  flex-shrink: 0;
+  border-radius: 180.5px;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Image inside card */
+.brand-card img {
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Equal vertical spacing between rows */
+.row-gap {
+  margin-bottom: 60px; /* ✅ Equal spacing like screenshot */
+}
+
+/* Mobile Responsive */
+@media (max-width: 767.98px) {
+  .brand-card {
+    width: 260px;
+    height: 480px;
+    border-radius: 130px;
+  }
+  .brand-card img {
+    max-width: 75%;
+  }
+  .row-gap {
+    margin-bottom: 40px; /* Mobile ke liye thoda kam gap */
+  }
+}
+/* Mobile view zig-zag alignment */
+@media (max-width: 767.98px) {
+  .brands-section .row-gap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* gap between cards */
+  }
+
+  /* Odd cards -> left */
+  .brands-section .row-gap .col-12:nth-child(odd) {
+    justify-content: flex-start !important;
+  }
+
+  /* Even cards -> right */
+  .brands-section .row-gap .col-12:nth-child(even) {
+    justify-content: flex-end !important;
+  }
+}
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .brand-card {
+    width: 220px;       /* adjust size for tablet */
+    height: 400px;
+    border-radius: 110px;
+  }
+
+  .brand-card img {
+    max-width: 80%;     /* slightly larger than mobile */
+  }
+
+  .row-gap {
+    margin-bottom: 50px; /* spacing between rows on tablet */
+  }
+}
+
+.icon-default {
+  color: #f2f2f2; /* any color you want */
 }
   </style>
 </head>
 <body>
-  <h2 class="paradox-title">
-    <span class="paradox-title-primary">CASA</span>
-    <span class="paradox-title-secondary">PARADOX</span>
-    <span class="paradox-title-tertiary">LUXE</span>
-  </h2>
+  <div class="cursor-circle"></div>
+    <div class="container-fluid" style="cursor:pointer ; padding: 0px;">
+         <!-- Hero Section -->
+      <section class="hero-section position-relative text-center text-lg-start">
+      <!-- Right Icon Dots Image -->
+          <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+                    <div class="menu">
+                    <a href="whoweare.html" class="anim-text">WHO WE ARE</a>
+                    <a href="#" class="anim-text">WHAT WE DO</a>
+                    <a href="#" class="anim-text" id="ourBrand">OUR BRANDS</a>
+                    </div>
+
+                    <div class="services" id="servicesBlock">
+                      <div class="branding">
+                          <p>RGA DESIGN LLP</p>
+                          <p>CASA PARADOX LUXE</p>
+                          <p>CASA POP</p>
+                          <p>ARZAANI</p>
+                          <p>RASEEL GUJRAL ART LEGACY</p>
+                          <p>SATISH GUJRAL ART</p>
+                      </div>
+                    </div>
+
+                    <div class="menu">
+                     <a  href="#" class="anim-text">LET'S CONNECT</a>
+                    </div>
+
+            
+                    <div class="video-block">
+                      <video autoplay muted loop playsinline width="100%" height="auto" style="border-radius: 4px;">
+                          <source src="assets/paradox.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video>
+                        <!-- Play Button -->
+                      <!-- <button id="playBtn" class="play-button">
+                        ▶
+                      </button> -->
+                    </div>
+          </div>
+            <video src="assets/Logo.webm" autoplay="" loop="" muted="" playsinline="" preload="auto" class="position-absolute z-2 logo-video">
+            </video>
+  
+        <!-- Main Heading & Butterfly in Two Columns -->
+        <div class="container mt-0 pt-0 mt-md-5 pt-md-5 p-0">
+              <!-- Top Right Text & Button -->
+            <div class="mt-5 pe-3 pe-md-5" style="max-width: 515px; margin-left: auto;">
+                <p class="hero-sec-des">
+                 When we engage, We co-crate,A design language that’s deeply personal and entirely unique.
+                </p>
+                <div class="button-component text-end">
+                  <a href="#" class="hero-sec-btn">
+                    <div class="label-clip">
+                      <div class="button-label">LET’S connect</div>
+                      <div class="button-label">LET’S connect</div>
+                    </div>
+                  </a>
+               </div>
+
+            </div>
+   <div class="row align-items-center" style="padding: 50px 0px;">
+      <div class="col-lg-8 text-start"> <!-- remove text-center -->
+        <p class="hero-sec-des2 mb-1">A celebrated and innovative force in the </p>
+        <div class="hero-container d-flex justify-content-start align-items-start">
+          <div class="hero-headline-wrapper d-flex flex-column align-items-start text-start">
+            <div class="headline-clip one"><div class="hero-heading text-start m-0">legacy</div></div>
+            <div class="headline-clip two"><div class="hero-heading text-start m-0">flows</div></div>
+            <div class="headline-clip three"><div class="hero-heading text-start m-0">into</div></div>
+            <div class="headline-clip four"><div class="hero-heading text-start m-0">possibilty</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+         <img src="assets/whatwedo/elements/lady-warior.png" alt="Butterfly" class="img-fluid tilt-img butterfly-cls"> 
+         <!-- <video autoplay muted loop playsinline width="100%" height="auto"  class="butterfly-cls">
+                <source src="assets/FLY_2.webm" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video> -->
+      </div>
+   </div>
+
+
+        </div>
+     </section>
+      
+      <section class="sticky-section" id="brand" style="padding-top: 6rem;">
+         <h1 class="hero-sec-liv mb-1">a living mosaic</h1> 
+        <div class="sticky-wrapper">
+            
+          <h2 class="sticky-heading">rewind</h2>
+        </div>
+         
+        <div class="content-col">
+                    <div class="block">A creative continuum unbound by time, alive in every frame.
+            The RGA design philosophy is conceived as an evolving process unbound by the rigidity of linear timelines. 
+            There are no trends here, only timeless conversations. An immersive expression of the many facets that define the creative continuum of Raseel Gujral Ansal.
+            Rather than presenting a singular narrative, the approach offers a relaxed and intuitive navigation across decades of work and disciplines; past, present, and future. 
+            Each project stands on its own, yet speaks to a greater whole. The practice resists the conventional format of a themed vocabulary; instead, it embraces what might be called a non-conventional  repository of a spontaneous gathering of memories.
+            The multi-disciplinary design practice is a crucible for incubation of spatial design, bespoke furniture, art, collectibles, and home accents. </div>
+        </div>
+      </section>
+
+      <!-- The Mission -->
+      <section class="sticky-section" id="mission">
+          
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">play</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">Space meets ParadoxPop Dialogues with Provenance
+          And Legacy flows into Possibility
+         
+        </div> 
+      </section>
+
+            <!-- The Vision -->
+      <section class="sticky-section" id="mission">
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">fast forward</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">Works under the banners of Casa Paradox Luxe, Casa Pop, RGAL, Arzaani, and RGA Design LLP coexist,
+ not in opposition, but in conversation. This fluid universe also features curated art and artefacts, offering moments of discovery and depth. Set within an ever-changing format with limitless permutations, their juxtaposition is effortless, their cohesion unforced. 
+Here, contradictions are welcome, genres blur, 
+and time folds inward.
+
+
+        </div>
+          <!-- <div class="block">Raseel Gujral Ansal, a celebrated and innovative force in the world of multi-disciplinary design for close to four decades, brings her unparalleled</div>
+        </div> -->
+      </section>
+<section class="sticky-section" id="mission" style="background-color: #f2f2f2; height:100vh;">
+  <div class="sticky-wrapper">
+    <h2 class="sticky-heading">mix</h2>
+  </div>
+  <div class="content-col">
+    <div class="block">
+      To experience a creative identity that is layered and unapologetically multifaceted.
+    </div>
+  </div>
+</section>
+
+<section class="names-section py-5" style="background-color:#0d0000; height:100vh; position:relative;">
+  <!-- Fish Image -->
+  <img src="latest.avif" alt="Fish" class="fish-img" />
+  <h1 class="our-brands-heading mb-5">OUR BRANDS</h1>
+  <div class="names-list-clip" id="namesClip" style="max-height:300px; overflow-y:auto;">
+    <div class="names-list" id="namesList">
+      <div class="names-item">eccentric</div>
+      <div class="names-item">glamourous</div>
+      <div class="names-item">Creative</div>
+      <div class="names-item">Refined</div>
+      <div class="names-item">Modern</div>
+      <div class="names-item">Confident</div>
+      <div class="names-item">Innovative</div>
+      <div class="names-item">luxury</div>
+      <div class="names-item">Pattern-rich</div>
+      <div class="names-item">india proud</div>
+      <div class="names-item">Abstract</div>
+      <div class="names-item">cult</div>
+      <div class="names-item">timeless</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Section -->
+<section class="brands-section position-relative text-center py-5">
+  <!-- Background Eagle -->
+  <div class="eagle-bg"></div>
+
+  <div class="container">
+    <!-- Row 1 (3 cards) -->
+    <div class="row justify-content-center row-gap">
+      <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+        <div class="brand-card">
+          <img src="assets/whatwedo/elements/casa-paradox-logo.png" alt="Casa Paradox Luxe">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+        <div class="brand-card">
+          <img src="assets/whatwedo/elements/rga-design-llp.png" alt="RGA Design LLP">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+        <div class="brand-card">
+          <img src="assets/whatwedo/elements/casa-pop-logo.png" alt="Casa Pop">
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 (2 cards) -->
+    <div class="row justify-content-center row-gap">
+      <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+        <div class="brand-card">
+          <img src="assets/whatwedo/elements/arzani-logo.png" alt="Arzaani">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+        <div class="brand-card">
+          <img src="assets/whatwedo/elements/rgal-logo.png" alt="Art">
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3 (1 card) -->
+    <div class="row justify-content-center row-gap">
+      <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+        <div class="brand-card">
+          <img src="assets/whatwedo/elements/sg-sir-logo.png" alt="Satish Gujral">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- ===== prefooter Section ===== -->
+
+    <div class="slide-container" id="slideContainer">
+              <!-- Slide 1 - Let's Get Started -->
+              <div class="slide slide-1">
+                  <div class="slide-content">
+                      <h1 class="main-title">
+                          LET'S<br>
+                          begin a<br>
+                           dialogue
+                      </h1>
+                      <div class="description-container">
+                      <p class="description">
+                          Ready to turn your vision into something real? So are we.
+                        </p> 
+                        <p class="description">
+                            Share your contact information and we’ll get back to you to discuss next steps.
+                          </p>
+                      </div>
+                  </div>
+                  <!-- Replace your existing icon wrapper with this -->
+                    <div
+                      class="nav-arrow prefooter-icon-clip"
+                      role="button"
+                      aria-label="Next slide"
+                      tabindex="0"
+                      onclick="slideToNext()"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+                    >
+                      <div class="prefooter-icon" aria-hidden="true">
+                        <!-- default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+
+                        
+
+                        <!-- hover state -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+              </div>
+              <!-- Slide 2 - Ask for Callback -->
+            <div class="slide slide-2">
+              <!-- Left Arrow -->
+                  <div
+                    class="nav-arrow prefooter-icon-clip-left"
+                    role="button"
+                    aria-label="Previous slide"
+                    tabindex="0"
+                    onclick="slideToFirst()"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+                  >
+                        <div class="prefooter-icons" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                            <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                            <g>
+                              <line class="prefooter-arrow" x1="50" y1="30" x2="10" y2="30"></line>
+                              <polyline class="prefooter-arrow" points="25,10 10,30 25,50"></polyline>
+                            </g>
+                          </svg>
+                        </div>
+                  </div>
+
+                  <!-- Right Form -->
+                  <div class="form-section">
+                    <h2 class="form-title">ASK FOR A CALL BACK</h2>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="eg. xyz">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Number</label>
+                          <input type="tel" class="form-control" placeholder="987654321">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+    </div>
+
+    
+     <!-- Footer -->
+    <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between   mt-5 gap-sm-0 gap-md-0 gap-lg-0 gap-xl-0 gap-4 p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-0 pt-md-3 pt-lg-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="#">ABOUT</a></li>
+                          <li><a href="#">CONTACT</a></li>
+                          <li><a href="#">AWARDS</a></li>
+                          <li><a href="#">MEDIA</a></li>
+                          <li><a href="#">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                          <p><a href="#">Cookie Policy</a></p>
+                          <p><a href="#">Copyright Policy</a></p>
+                          <p><a href="#">Privacy Policy</a></p>
+                          <p><a href="#">Product Information</a></p>
+                          <!--<p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>-->
+                          </div>
+                      </div>
+                      </div>
+
+                      <!-- Column 3 -->
+                      <div class="col-6 col-md-12 col-lg-4">
+                      <div class="footer-column">
+                          <div class="social-icons d-flex justify-content-center justify-content-lg-start mtop-9  ps-sm-0 ps-md-0 ps-lg-0 ps-xl-0 ps-4">
+                          <a href="https://www.youtube.com/@RaseelGujralAnsal" class="me-2"><img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube"></a>
+                          <a href="https://www.instagram.com/raseelgujralansalofficial/" class="me-2"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
+                          <a href="https://www.facebook.com/share/16rnA1tZCN/" class="me-2"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/pinterest.svg" alt="Pinterest"></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+             <div class="footer-logo position-relative d-inline-block w-100 no-wrap-logo">
+               RASEE<span id="raseel-l" class="raseel-l">L<span class="butterfly-class">
+            <video src="assets/Butterfly.webm"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   preload="auto"
+                   class="butterfly-video">
+            </video>
+                </span>
+              </span>
+            </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+    </section>
+
+
+       <!-- Founder Section -->
+<!-- <section class="founder-section container-fluid p-0">
+  <div class="row g-0 position-relative">
+
+    <div class="col-md-6 founder-left d-flex flex-column justify-content-center p-5 text-white">
+      <h2 class="founder-name reveal-text headline-clip">
+        Raseel<br>Gujral<br>Ansal
+      </h2>
+      <p class="founder-role">Founder</p>
+      <div class="biography-btns">
+       
+       <a href="javascript:void(0)" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#biographyModal">
+  Biography
+</a>
+
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- Custom Glassmorphism Biography Modal -->
+<!-- <div class="modal fade" id="biographyModal" tabindex="-1" aria-labelledby="biographyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content custom-modal">
+      
+     
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="biographyModalLabel">Raseel Gujral Ansal – Biography</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+
+      <div class="modal-body">
+        <p>
+          Raseel Gujral Ansal is a visionary entrepreneur, founder, and creative leader known for her
+          work in design, architecture, and business innovation. Her career spans decades of 
+          excellence, shaping modern luxury spaces with an artistic approach inspired by heritage and
+          contemporary culture.
+        </p>
+        <p>
+          She has collaborated with leading brands and individuals, delivering projects that combine 
+          elegance, functionality, and innovation. Her philosophy centers on creating timeless 
+          experiences through design.
+        </p>
+      </div>
+      
+
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div> -->
+
+    
+     <a href="https://wa.me/919313746825" 
+           class="whatsapp-float" 
+           target="_blank" 
+           aria-label="Chat on WhatsApp" 
+           data-bs-toggle="tooltip" 
+           data-bs-placement="left" 
+           title="Chat with us">
+           <i class="fa-brands fa-whatsapp"></i> </a>
+  </div>
+  
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+   
+
+
+ <script>
+  // hero section animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  // One
+  gsap.to(".headline-clip.one", {
+    x: "-25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 0.9
+    }
+  });
+
+  // Two
+  gsap.to(".headline-clip.two", {
+    x: "50vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1
+    }
+  });
+
+  // Three
+  gsap.to(".headline-clip.three", {
+    x: "25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1.2
+    }
+  });
+
+  // Four
+  gsap.to(".headline-clip.four", {
+    x: "-10vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 0.8
+    }
+  });
+</script>
+
+<!-- gsap scroll trigger-->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".content-col .block").forEach((block) => {
+      gsap.to(block, {
+        scrollTrigger: {
+          trigger: block,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+  </script>
+<!-- name section js -->
+   <script>
+   
+  gsap.registerPlugin(ScrollTrigger);
+
+  const namesList = document.querySelector("#namesList");
+  const items = gsap.utils.toArray(".names-item");
+  const itemHeight = items[0].offsetHeight;
+
+  gsap.to(namesList, {
+    y: () => -(items.length - 1) * itemHeight,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".names-section",
+      start: "top top",           // start when section hits top
+      end: "+=" + (items.length * itemHeight),
+      scrub: true,
+      pin: true,                  // keeps section pinned
+      anticipatePin: 1
+    }
+  });
+
+  </script>
+
+
+
+
+
+ <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+<!-- =================== END PREFOOTER (Poison-style) =================== -->
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const revealTexts = document.querySelectorAll(".reveal-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% visible
+  );
+
+  revealTexts.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+</script>
+<script>
+ const img = document.querySelector(".fish-img");
+const listClip = document.getElementById("namesClip");
+
+listClip.addEventListener("scroll", () => {
+  const maxScroll = listClip.scrollHeight - listClip.clientHeight;
+  const scrollTop = listClip.scrollTop;
+
+  // 0 → 1 progress
+  let progress = scrollTop / maxScroll;
+
+  // full screen tak move
+  const maxX = window.innerWidth - img.offsetWidth;
+  const moveX = progress * maxX;
+
+  img.style.transform = `translate(${moveX}px, -50%)`;
+});
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
