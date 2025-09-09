@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="rgal.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Raseel Gujral Ansal</title>
+  <style> 
+  
+
+
+/* aniamtion text */
+ .headline-clip {
+  overflow: hidden; /* hides the text until it reveals */
+  display: inline-block;
+}
+
+/* Quote Text */
+  .quote-text {
+  color: #FB5E24;
+  text-align: center;
+  font-family:'AmsterdamFour', cursive;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 197.539%; /* 114.572px */
+  }
+
+  /* Signature */
+  .quote-signature {
+  font-family: 'AmsterdamFour', cursive;
+  font-size: 1.2rem;
+  color: #FF5C1D;
+  text-align: right;
+  max-width: 90%;   /* keeps it from touching the edge */
+  margin: 0 auto 2rem auto; /* centers block but aligns text right inside it */
+  padding-right: 6%; /* extra breathing space */
+  }
+
+  /* Paragraphs */
+  .para {
+    max-width: 1176px;
+    margin: 0 auto 1rem auto;
+    font-family: "SafiroMedium", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #FFF;
+    font-style: normal;
+    text-align: center;
+  }
+
+  /* Responsive adjustments */
+  @media (min-width: 992px) {
+    .quote-text {
+      font-size: 3.5rem;
+    }
+    .quote-signature {
+      font-size: 1.5rem;
+    }
+    .para {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .quote-text {
+      font-size: 1.8rem;
+    }
+    .quote-signature {
+      font-size: 1rem;
+      text-align: center; /* center on small screens */
+    }
+    .para {
+      font-size: 0.9rem;
+      padding: 0 15px;
+    }
+  }
+
+
+/* 💻 Laptop & Desktop */
+@media (min-width: 992px) {
+  .circus-section {
+    padding: 4rem 9rem;
+    /* Max width control */
+    max-width: 1530px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 💻 Laptop & Desktop */
+@media (min-width: 992px) {
+  .circus-section {
+    padding: 4rem 9rem;
+  }
+}
+
+
+    
+.monkey-img {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  z-index: 0;
+
+  /* Responsive width */
+  width: clamp(180px, 35vw, 788px);
+
+  /* Maintain ratio automatically */
+  height: auto;
+  aspect-ratio: 37 / 46;
+
+  /* Prevent cut on small screens */
+  max-width: 90%;
+}
+
+
+
+ /* Heading */
+.circus-heading {
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  color: #FFF;
+  font-family: "MiedingerBold", sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  
+  /* Fluid responsive font size */
+  font-size: clamp(28px, 4vw, 58px);
+  /* 28px = min (mobile),
+     4vw = fluid scaling,
+     58px = max (large desktop) */
+}
+
+/* Extra tuning for very large screens */
+@media (min-width: 1600px) {
+  .circus-heading {
+    font-size: 64px;
+  }
+}
+
+/* Extra tuning for small tablets */
+@media (max-width: 768px) {
+  .circus-heading {
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+
+    .circus-heading span {
+     color: #FB5E24; 
+    }
+
+    /* Signature + year */
+    .signature-block {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+  
+    .signature-block img {
+      max-height: 50px;
+      width: auto;
+    }
+
+    .year-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff4500;
+    }
+
+    /* Content Text */
+  .circus-content {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+
+  /* Typography */
+  font-family: "SafiroMedium", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #FFF;
+
+  /* Responsive font-size */
+  font-size: clamp(14px, 1.1vw, 18px);
+  line-height: 1.6;
+
+  /* Max width for readability */
+  max-width: 1100px;
+
+  /* Default (desktop/laptop) */
+  text-align: left;
+}
+
+
+
+
+    /* Responsive Monkey Position */
+    @media (max-width: 768px) {
+      /* .monkey-img {
+        position: static;
+        display: block;
+        margin: 2rem auto;
+        max-width: 260px;
+      } */
+
+      .signature-block {
+        justify-content: center;
+      }
+
+      .circus-heading {
+        text-align: left;
+        font-size:36px !important;
+      }
+
+      .circus-content {
+        font-size: 0.95rem;
+      }
+    }
+  
+ .signature-block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem; /* space between items */
+  margin-top: 1rem;
+  flex-wrap: wrap; /* mobile view ke liye wrap karega */
+}
+/* Signature text */
+.sig-text {
+  color: #FFF;
+  text-align: center;
+  font-family: 'AmsterdamFour', cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  /* Responsive font-size */
+  font-size: clamp(20px, 2.2vw, 38px);
+
+  /* Line height relative to font-size */
+  line-height: 1.9; /* same proportion as your given 197.539% */
+}
+
+
+.middle-img {
+  /* Responsive width */
+  width: clamp(40px, 8vw, 112px);
+
+  /* Maintain aspect ratio automatically */
+  aspect-ratio: 66 / 41;
+
+  height: auto;          /* auto height based on aspect ratio */
+  object-fit: contain;   /* preserve image quality */
+  flex-shrink: 0;        /* prevent shrinking in flexbox */
+}
+
+
+.year-text {
+  font-family: "MiedingerBold", sans-serif;
+  color: #FB5E24;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2; /* better readability */
+
+  /* Responsive font size */
+  font-size: clamp(16px, 2vw, 24px);
+
+  /* Ensure alignment in center blocks */
+  display: inline-block;
+}
+
+
+.icon-default {
+  color: #f2f2f2; /* any color you want */
+}
+
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .monkey-img {
+    position: absolute;
+    right: 0;          /* thoda right overlap */
+    top: 0;            /* heading ke paas */
+    width: 333px;        /* fixed width */
+    height: 414px;       /* fixed height */
+    aspect-ratio: 37/46; /* maintain proportion */
+    max-width: unset;    /* clamp hataya for fixed size */
+    opacity: 0.9;        /* thoda transparency readability ke liye */
+  }
+  }
+
+  .circus-heading {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(20px, 6vw, 58px);
+    text-align: left;
+    line-height: 1.3;
+  }
+
+  .circus-content {
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+/* Portfolio Card */
+.portfolio-card {
+  flex: 0 0 80%;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  transition: transform 0.3s;
+}
+
+/* Video - fixed 60% */
+.portfolio-video {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content - fixed 40% */
+.portfolio-content {
+  flex: 0 0 40%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+/* Section wrapper */
+.paintings-section {
+  min-height: 100vh;              /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;        /* vertical centering */
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Heading */
+.paintings-heading {
+  font-family: "MiedingerBold", sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #000;
+  text-align: center;
+}
+
+/* Portfolio section */
+.portfolio-section {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: grab;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.portfolio-section::-webkit-scrollbar {
+  display: none;
+}
+.portfolio-section.active { cursor: grabbing; }
+
+/* Portfolio card */
+.portfolio-card {
+  flex: 0 0 80%;
+  scroll-snap-align: center;      /* center each card */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  transition: transform 0.3s;
+  margin: auto;                   /* center horizontally */
+}
+
+/* Video - 60% */
+.portfolio-video {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content - 40% */
+.portfolio-content {
+  flex: 0 0 40%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+/* Title */
+.painting-title {
+  font-family: "MiedingerBold", sans-serif;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* Description */
+.painting-desc {
+  font-family: "SafiroMedium", sans-serif;
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: #111;
+}
+
+/* Arrows */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.portfolio-wrapper:hover .arrow-btn { opacity: 1; }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .portfolio-card { flex: 0 0 85%; height: 75vh; }
+}
+@media (max-width: 992px) {
+  .portfolio-card { flex: 0 0 90%; height: 70vh; }
+}
+
+/* Mobile stack */
+@media (max-width: 768px) {
+  .portfolio-section {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+  }
+  .portfolio-card {
+    flex: 1 1 auto;
+    width: 100%;
+    height: auto;
+  }
+  .portfolio-video { height: 250px; }
+  .arrow-btn { display: none; }
+}
+@media (max-width: 576px) {
+  .portfolio-card { flex: 0 0 98%; }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="cursor-circle"></div>
+    <div class="container-fluid" style="cursor:pointer ; padding: 0px;">
+         <!-- Hero Section -->
+      <section class="hero-section position-relative text-center text-lg-start">
+      <!-- Right Icon Dots Image -->
+          <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+                    <div class="menu">
+                    <a href="whoweare.html" class="anim-text">WHO WE ARE</a>
+                    <a href="#" class="anim-text">WHAT WE DO</a>
+                    <a href="#" class="anim-text" id="ourBrand">OUR BRANDS</a>
+                    </div>
+
+                    <div class="services" id="servicesBlock">
+                      <div class="branding">
+                          <p>RGA DESIGN LLP</p>
+                          <p>CASA PARADOX LUXE</p>
+                          <p>CASA POP</p>
+                          <p>ARZAANI</p>
+                          <p>RASEEL GUJRAL ART LEGACY</p>
+                          <p>SATISH GUJRAL ART</p>
+                      </div>
+                    </div>
+
+                    <div class="menu">
+                     <a  href="#" class="anim-text">LET'S CONNECT</a>
+                    </div>
+
+            
+                    <div class="video-block">
+                      <video autoplay muted loop playsinline width="100%" height="auto" style="border-radius: 4px;">
+                          <source src="assets/paradox.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video>
+                        <!-- Play Button -->
+                      <!-- <button id="playBtn" class="play-button">
+                        ▶
+                      </button> -->
+                    </div>
+          </div>
+            <video src="assets/Logo.webm" autoplay="" loop="" muted="" playsinline="" preload="auto" class="position-absolute z-2 logo-video">
+            </video>
+  
+        <!-- Main Heading & Butterfly in Two Columns -->
+        <div class="container mt-0 pt-0 mt-md-5 pt-md-5 p-0">
+              <!-- Top Right Text & Button -->
+            <div class="mt-5 pe-3 pe-md-5" style="max-width: 515px; margin-left: auto;">
+                <p class="hero-sec-des">
+                I am Sifar, an artist, a collaborator, a dreamer, and a questioner. I exist within the paradox, forever asking: Is this my circus?
+                </p>
+                <div class="button-component text-end">
+                  <a href="#" class="hero-sec-btn">
+                    <div class="label-clip">
+                      <div class="button-label">LET’S connect</div>
+                      <div class="button-label">LET’S connect</div>
+                    </div>
+                  </a>
+               </div>
+
+            </div>
+          <div class="row align-items-center" style="padding: 50px 0px;">
+              <div class="col-lg-8 text-start"> <!-- remove text-center -->
+                <p class="hero-sec-des2 mb-1">A celebrated and innovative force in the </p>
+                <div class="hero-container d-flex justify-content-start align-items-start">
+                  <div class="hero-headline-wrapper d-flex flex-column align-items-start text-start">
+                    <div class="headline-clip one"><div class="hero-heading text-start m-0">raseel</div></div>
+                    <div class="headline-clip two"><div class="hero-heading text-start m-0">gujral</div></div>
+                    <div class="headline-clip three"><div class="hero-heading text-start m-0">art</div></div>
+                    <div class="headline-clip four"><div class="hero-heading text-start m-0">legacy</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                <img src="assets/rgal/elements/rgal.png" alt="Butterfly" class="img-fluid tilt-img butterfly-cls"> 
+              </div>
+          </div>
+          <!-- Quote -->
+    <h2 class="quote-text text-center">
+      “Art emerges when multiple sensorial influences are translated”
+    </h2>
+
+    <!-- Signature -->
+    <p class="quote-signature text-end">– Raseel</p>
+
+    <!-- Paragraph 1 -->
+    <p class="para">
+      Expanding her creative spectrum, Raseel co-founded RGAL in 2012 as an art advisory, curatorial, and creative initiative for select patrons, embodying
+      The Spirit of Legacy.
+    </p>
+
+    <!-- Paragraph 2 -->
+    <p class="para">
+      This endeavour added a deeply resonant facet to her multifaceted legacy. The evolution of the RGAL initiative is to journey on a path that seamlessly blends art, design, and technology, creating transformative multisensory experiences and pushing the boundaries of conventional art forms.
+    </p>
+
+        </div>
+     </section>
+      
+
+
+    <section class="circus-section container">
+        <!-- Heading -->
+        <h1 class="circus-heading">
+          IS THIS MY CIRCUS <span>?</span>
+        </h1>
+
+
+    <!-- Signature + Center Icon + 2025 -->
+    <div class="signature-block text-center">
+      <span class="sig-text">Sifar</span>
+      <img src="assets/rgal/elements/sifar.png" alt="Middle Icon" class="middle-img">
+      <span class="year-text">2025</span>
+    </div>
+
+        <!-- Monkey Image -->
+        <img src="assets/rgal/elements/monkey.png" alt="Monkey" class="monkey-img">
+
+        <!-- Content -->
+        <div class="circus-content">
+          <p><strong>I Am Sifar</strong><br>Is This My Circus?</p>
+
+          <p>I dream. The spark of an idea forms vivid, elusive, layered with emotions drawn from memory, imagination, and intuition. But a dream is never static. It evolves. 
+    In collaboration with AI, I explore its depths through an intense dialogue, where unexpected possibilities unfold. Together, we generate an image imbued with emotions 
+    nostalgia, wonder, or perhaps the quiet unease of curiosity. The result always surprises me, as if the dream reveals itself fully for the first time, no longer mine but something shared with the unknown.</p>
+
+          <p>Seeing this vision, I collaborate with my team, who are integral with their skills, to refine it, carefully introducing elements that complete the story I wish to tell. It’s a process of co-creation, where logic and instinct meet to shape the chaos. Once this digital reflection is perfected, it transforms from concept into something tangible a foundation on which the rest of the journey is built.</p>
+
+          <p>We then turn to artisanal studios, where master craftsmen bring their expertise to translate this vision into watercolor. Their hands breathe life into every stroke, infusing the work with texture and depth that only tradition can provide. Here, the dream is reborn, bridging the contemporary with the handmade, merging technology with the timeless touch of artistry.
+        </p>
+
+          <p>And yet, as each creation comes to life, I can’t help but ask: Is this really my circus, or am I merely one of its performers? In the act of creation, control is both necessary and illusory, and the line between ringmaster and participant often blurs. What begins as a whisper of thought becomes a vivid expression of emotion a story shared across 
+    mediums, cultures, and disciplines.
+    </p>
+      <p>Perhaps, in the end, that’s the beauty of it. Each creation asks me again: Is this my circus? Or am I the monkey?</p>
+      <p>The artist, perhaps, is a paradox both the dreamer and the craftsman, and yet neither at the same time. The dreamer gives birth to the idea, but the one who paints, who 
+    refines, and collaborates also shapes the outcome. Without either, the creation would be incomplete. Maybe the artist is the bridge the one who navigates the chaos of 
+    dreaming, directing, and surrendering. Or perhaps the true artist is the process itself, a living entity that transcends ownership, where the dreamer, the painter, the AI, and the artisans all play their part.
+    </p>
+    <p>And so, I ask again: Is this my circus? Or am I the monkey?
+    </p>
+          <p>I Am Sifar</p>
+          <p>This paradox of authorship finds its embodiment in Sifar, my symbolic signature. The word, written in Urdu, carries personal significance my father signed his early works in Urdu, and I now carry forward that tradition in a new form. Sifar is a seal, a mark that transcends individual ownership, embodying humility, infinite potential, and cultural 
+    connection .
+    </p>
+    <p>Like the zero, Sifar holds within it both emptiness and boundless possibility a space where ideas, dreams, and collaboration come to life. It rejects singular authorship, 
+    embracing co-creation. It is an identity, yet it is nameless.
+    </p>
+    <p>The circular form enclosing Sifar mirrors this infinite cycle creation without an end, authorship without ego. The mark is embossed or debossed, a subtle imprint rather than a claim. It is not a signature of ownership, but a testament to the process.
+    </p>
+    <p>
+    I am Sifar, an artist, a collaborator, a dreamer, and a questioner. I exist within the paradox, forever asking: Is this my circus?</p>
+        </div>
+    </section>
+
+
+<section class="paintings-section container">
+  <!-- Heading -->
+  <h2 class="paintings-heading text-center">PAINTINGS</h2>
+  <div class="portfolio-wrapper" style="position: relative;">
+    <button class="arrow-btn arrow-left" id="prevBtn">&#8249;</button>
+    <button class="arrow-btn arrow-right" id="nextBtn">&#8250;</button>
+
+    <section class="portfolio-section" id="portfolioSection">
+      <div class="portfolio-card">
+        <video class="portfolio-video" autoplay muted loop src="https://www.dropbox.com/scl/fi/m9kmn4ktq8s5mu96ud7l3/Lloyd-Tichio-Thumbnail-Video.mp4?rlkey=0uacotp6yyfep7l04uw6dg3fs&dl=1"></video>
+        <div class="portfolio-content">
+          <h3 class="painting-title">WAR OF THE ROSES</h3>
+          <p class="painting-desc">
+            Clad in uniformity, the performers resemble an army yet their weapons are roses. 
+            This tongue-in-cheek tableau explores the tensions of performative peace and veiled 
+            rivalry, where civility conceals competition, and affection becomes its own battlefield.
+          </p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <video class="portfolio-video" autoplay muted loop src="https://www.dropbox.com/scl/fi/dsrkwbves8hn468sgcwug/Zenith-Thumbnail-Video.mp4?rlkey=y4ppmxokm6n8b1d36gi4okwdz&dl=1"></video>
+        <div class="portfolio-content">
+          <h3 class="painting-title">ZENITH</h3>
+          <p class="painting-desc">
+            A mesmerizing ascent into the sublime, where performers transcend earthly confines 
+            and touch the apex of artistic expression. The performance encapsulates ambition, 
+            struggle, and the pursuit of transcendence.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- ===== prefooter Section ===== -->
+
+    <div class="slide-container" id="slideContainer">
+              <!-- Slide 1 - Let's Get Started -->
+              <div class="slide slide-1">
+                  <div class="slide-content">
+                      <h1 class="main-title">
+                          LET'S<br>
+                          begin a<br>
+                           dialogue
+                      </h1>
+                      <div class="description-container">
+                      <p class="description">
+                          Ready to turn your vision into something real? So are we.
+                        </p> 
+                        <p class="description">
+                            Share your contact information and we’ll get back to you to discuss next steps.
+                          </p>
+                      </div>
+                  </div>
+                  <!-- Replace your existing icon wrapper with this -->
+                    <div
+                      class="nav-arrow prefooter-icon-clip"
+                      role="button"
+                      aria-label="Next slide"
+                      tabindex="0"
+                      onclick="slideToNext()"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+                    >
+                      <div class="prefooter-icon" aria-hidden="true">
+                        <!-- default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+
+                        
+
+                        <!-- hover state -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+              </div>
+              <!-- Slide 2 - Ask for Callback -->
+            <div class="slide slide-2">
+              <!-- Left Arrow -->
+                  <div
+                    class="nav-arrow prefooter-icon-clip-left"
+                    role="button"
+                    aria-label="Previous slide"
+                    tabindex="0"
+                    onclick="slideToFirst()"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+                  >
+                        <div class="prefooter-icons" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                            <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                            <g>
+                              <line class="prefooter-arrow" x1="50" y1="30" x2="10" y2="30"></line>
+                              <polyline class="prefooter-arrow" points="25,10 10,30 25,50"></polyline>
+                            </g>
+                          </svg>
+                        </div>
+                  </div>
+
+                  <!-- Right Form -->
+                  <div class="form-section">
+                    <h2 class="form-title">ASK FOR A CALL BACK</h2>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="eg. xyz">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Number</label>
+                          <input type="tel" class="form-control" placeholder="987654321">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+    </div>
+
+    
+     <!-- Footer -->
+    <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between   mt-5 gap-sm-0 gap-md-0 gap-lg-0 gap-xl-0 gap-4 p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-0 pt-md-3 pt-lg-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="#">ABOUT</a></li>
+                          <li><a href="#">CONTACT</a></li>
+                          <li><a href="#">AWARDS</a></li>
+                          <li><a href="#">MEDIA</a></li>
+                          <li><a href="#">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                          <p><a href="#">Cookie Policy</a></p>
+                          <p><a href="#">Copyright Policy</a></p>
+                          <p><a href="#">Privacy Policy</a></p>
+                          <p><a href="#">Product Information</a></p>
+                          <!--<p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>-->
+                          </div>
+                      </div>
+                      </div>
+
+                      <!-- Column 3 -->
+                      <div class="col-6 col-md-12 col-lg-4">
+                      <div class="footer-column">
+                          <div class="social-icons d-flex justify-content-center justify-content-lg-start mtop-9  ps-sm-0 ps-md-0 ps-lg-0 ps-xl-0 ps-4">
+                          <a href="https://www.youtube.com/@RaseelGujralAnsal" class="me-2"><img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube"></a>
+                          <a href="https://www.instagram.com/raseelgujralansalofficial/" class="me-2"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
+                          <a href="https://www.facebook.com/share/16rnA1tZCN/" class="me-2"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
+                          <a href="#" class="me-2"><img src="https://simpleicons.org/icons/pinterest.svg" alt="Pinterest"></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+             <div class="footer-logo position-relative d-inline-block w-100 no-wrap-logo">
+               RASEE<span id="raseel-l" class="raseel-l">L<span class="butterfly-class">
+            <video src="assets/Butterfly.webm"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   preload="auto"
+                   class="butterfly-video">
+            </video>
+                </span>
+              </span>
+            </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+    </section>
+    
+     <a href="https://wa.me/919313746825" 
+           class="whatsapp-float" 
+           target="_blank" 
+           aria-label="Chat on WhatsApp" 
+           data-bs-toggle="tooltip" 
+           data-bs-placement="left" 
+           title="Chat with us">
+           <i class="fa-brands fa-whatsapp"></i> </a>
+  </div>
+  
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+   
+
+
+ <script>
+  // hero section animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  // One
+  gsap.to(".headline-clip.one", {
+    x: "-25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 0.9
+    }
+  });
+
+  // Two
+  gsap.to(".headline-clip.two", {
+    x: "50vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1
+    }
+  });
+
+  // Three
+  gsap.to(".headline-clip.three", {
+    x: "25vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 1.2
+    }
+  });
+
+  // Four
+  gsap.to(".headline-clip.four", {
+    x: "-10vw",
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-container",
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: 0.8
+    }
+  });
+</script>
+
+<!-- gsap scroll trigger-->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".content-col .block").forEach((block) => {
+      gsap.to(block, {
+        scrollTrigger: {
+          trigger: block,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+  </script>
+<!-- name section js -->
+   <script>
+   
+  gsap.registerPlugin(ScrollTrigger);
+
+  const namesList = document.querySelector("#namesList");
+  const items = gsap.utils.toArray(".names-item");
+  const itemHeight = items[0].offsetHeight;
+
+  gsap.to(namesList, {
+    y: () => -(items.length - 1) * itemHeight,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".names-section",
+      start: "top top",           // start when section hits top
+      end: "+=" + (items.length * itemHeight),
+      scrub: true,
+      pin: true,                  // keeps section pinned
+      anticipatePin: 1
+    }
+  });
+
+  </script>
+
+
+
+
+
+ <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+<!-- =================== END PREFOOTER (Poison-style) =================== -->
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const revealTexts = document.querySelectorAll(".reveal-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% visible
+  );
+
+  revealTexts.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+const slider = document.getElementById('portfolioSection');
+const cards = slider.querySelectorAll('.portfolio-card');
+const cardGap = 16;
+const cardWidth = cards[0].offsetWidth + cardGap;
+
+// ----- Drag to scroll (desktop only) -----
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  if(window.innerWidth < 768) return;
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+  snapToCard();
+});
+
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+// ----- Mouse wheel scroll -----
+let isScrolling = false;
+slider.addEventListener('wheel', (e) => {
+  if(window.innerWidth < 768) return;
+  e.preventDefault();
+  if (isScrolling) return;
+  isScrolling = true;
+
+  const direction = e.deltaY > 0 ? 1 : -1;
+  const index = Math.round(slider.scrollLeft / cardWidth) + direction;
+
+  slider.scrollTo({
+    left: index * cardWidth,
+    behavior: 'smooth'
+  });
+
+  setTimeout(() => {
+    isScrolling = false;
+  }, 300);
+});
+
+// ----- Arrow buttons -----
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+prevBtn.addEventListener('click', () => {
+  const index = Math.round(slider.scrollLeft / cardWidth) - 1;
+  slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+  const index = Math.round(slider.scrollLeft / cardWidth) + 1;
+  slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+});
+
+// ----- Touch support -----
+let touchStartX = 0;
+let touchScrollLeft = 0;
+
+slider.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].pageX;
+  touchScrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].pageX;
+  const walk = touchStartX - x;
+  slider.scrollLeft = touchScrollLeft + walk;
+});
+
+slider.addEventListener('touchend', () => {
+  snapToCard();
+});
+
+// ----- Snap to nearest card -----
+function snapToCard() {
+  if(window.innerWidth < 768) return;
+  const index = Math.round(slider.scrollLeft / cardWidth);
+  slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+<!-- <script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  ScrollTrigger.matchMedia({
+    "(min-width: 992px)": function () {
+      gsap.to(".headline-clip.one", {
+        x: "-25vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.9
+        }
+      });
+
+      gsap.to(".headline-clip.two", {
+        x: "50vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+
+      gsap.to(".headline-clip.three", {
+        x: "25vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 1.2
+        }
+      });
+
+      gsap.to(".headline-clip.four", {
+        x: "-10vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.8
+        }
+      });
+    },
+
+  
+    "(max-width: 991px)": function () {
+      gsap.to(".headline-clip.one", {
+        x: "-10vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+
+      gsap.to(".headline-clip.two", {
+        x: "20vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+
+      gsap.to(".headline-clip.three", {
+        x: "14vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.7
+        }
+      });
+
+      gsap.to(".headline-clip.four", {
+        x: "-6vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.5
+        }
+      });
+    }
+
+  });
+</script>
+<div class="row align-items-center p-3">
+  <div class="col-lg-8 text-start"> 
+    <p class="hero-sec-des2 mb-1">Our Brands</p>
+    <div class="hero-container d-flex justify-content-start align-items-start">
+      <div class="hero-headline-wrapper d-flex flex-column align-items-start text-start">
+        <div class="headline-clip one"><div class="hero-heading text-start m-0">Breathe</div></div>
+        <div class="headline-clip two"><div class="hero-heading text-start m-0">The</div></div>
+        <div class="headline-clip three"><div class="hero-heading text-start m-0">India</div></div>
+        <div class="headline-clip four"><div class="hero-heading text-start m-0">Story</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
+    <video autoplay muted loop playsinline width="100%" height="auto" class="butterfly-cls">
+      <source src="assets/FLY_2.webm" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div> -->
