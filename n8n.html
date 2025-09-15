@@ -1,0 +1,558 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 11
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1560,
+        40
+      ],
+      "id": "7447f1c4-e4e7-439a-ad32-62790a101a02",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "getRows",
+        "workbook": {
+          "__rl": true,
+          "value": "01PJKMO5GAP2SZOSNHAFGJWJT5GMLTXAEI",
+          "mode": "list",
+          "cachedResultName": "lead_calls",
+          "cachedResultUrl": "https://autpl-my.sharepoint.com/personal/dev2_team365_io/_layouts/15/Doc.aspx?sourcedoc=%7B97A57EC0-A749-4C01-9B26-7D33173B8088%7D&file=lead_calls.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1"
+        },
+        "worksheet": {
+          "__rl": true,
+          "value": "{00000000-0001-0000-0000-000000000000}",
+          "mode": "list",
+          "cachedResultName": "call_sheet",
+          "cachedResultUrl": "https://autpl-my.sharepoint.com/personal/dev2_team365_io/_layouts/15/Doc.aspx?sourcedoc=%7B97A57EC0-A749-4C01-9B26-7D33173B8088%7D&file=lead_calls.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&activeCell=call_sheet!A1"
+        },
+        "table": {
+          "__rl": true,
+          "value": "{4E1A4162-2B6D-4DE6-9700-99210800158B}",
+          "mode": "list",
+          "cachedResultName": "Table2",
+          "cachedResultUrl": "https://autpl-my.sharepoint.com/personal/dev2_team365_io/_layouts/15/Doc.aspx?sourcedoc=%7B97A57EC0-A749-4C01-9B26-7D33173B8088%7D&file=lead_calls.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&activeCell=call_sheet!A1:G5"
+        },
+        "filters": {}
+      },
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 2.1,
+      "position": [
+        -1340,
+        40
+      ],
+      "id": "a3f4eb88-2e19-4a56-a744-12dd1a814c41",
+      "name": "Microsoft Excel 365",
+      "credentials": {
+        "microsoftExcelOAuth2Api": {
+          "id": "QFUGTVlPH3v41bJ4",
+          "name": "Microsoft Excel account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "5666b056-8845-4042-879a-7dc6552a18bb",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "new",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1120,
+        40
+      ],
+      "id": "53178e49-8e9f-4d84-8bb0-3acdec7f8a2d",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=lead_id: {{ $json.lead_id }}\nname: {{ $json.name }}\nphone_number: {{ $json.phone_number }}\nstatus: {{ $json.status }}\ntimestamps: {{ $json.timestamps }}\ncall_outcome: {{ $json.call_outcome }}\nbooking_date_time:{{ $json.booking_date_time }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a helpful You are assitant. Generate Structured JSON with the following details:\n-id : string\n-name: full name of receipent\n-phone_number: string\n-status : string\n-timestamps: string\n-call_outcome: string\n-booking_date_time: string\nOutput only in this exact JSON format no comments, no extra text.assistant u are a helpful assistant"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -880,
+        20
+      ],
+      "id": "910f016a-35e2-4d34-b987-53d6406e8203",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        300
+      ],
+      "id": "9e09ca7a-64d1-4d0a-bf88-267caf977c09",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "rUmbgE1bszWXdItg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"tools\": [\n    {\n      \"function_declarations\": [\n        {\n          \"name\": \"save_lead\",\n          \"description\": \"Save or update a lead record with call status and booking details.\",\n          \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"lead_id\": {\n                \"type\": \"string\",\n                \"description\": \"Unique ID of the lead\"\n              },\n              \"name\": {\n                \"type\": \"string\",\n                \"description\": \"Full name of the lead\"\n              },\n              \"phone_number\": {\n                \"type\": \"string\",\n                \"description\": \"Phone number of the lead in international format\"\n              },\n              \"status\": {\n                \"type\": \"string\",\n                \"description\": \"Current status of the lead (e.g., new, in_progress, completed)\"\n              },\n              \"timestamps\": {\n                \"type\": \"string\",\n                \"description\": \"ISO 8601 timestamp of creation or update\"\n              },\n              \"call_outcome\": {\n                \"type\": \"string\",\n                \"description\": \"Result of the call (e.g., answered, missed, voicemail)\"\n              },\n              \"booking_date_time\": {\n                \"type\": \"string\",\n                \"description\": \"Scheduled booking date and time in ISO 8601 format\"\n              }\n            },\n            \"required\": [\"lead_id\", \"name\", \"phone_number\", \"status\"]\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -680,
+        300
+      ],
+      "id": "8b339114-a742-44d3-9adf-2b05864c74dc",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.retellai.com/v2/create-phone-call",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer key_774c1b6da1c575a688c68c3fe383"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"from_number\": \"+19843065335\",\n  \"to_number\": \"{{ $('Microsoft Excel 365').item.json.phone_number }}\",\n  \"retell_llm_dynamic_variables\": {\n    \"lead_id\": \"{{ $('Microsoft Excel 365').item.json.lead_id }}\",\n    \"name\": \"{{ $('Microsoft Excel 365').item.json.name }}\",\n    \"phone_number\": \"{{ $('Microsoft Excel 365').item.json.phone_number }}\",\n    \"status\": \"{{ $('Microsoft Excel 365').item.json.status }}\",\n    \"timestamps\":\" {{ $('Schedule Trigger').item.json.timestamp }} \",\n    \"call_outcome\": \"{{ $('Microsoft Excel 365').item.json.call_outcome }}\",\n    \"booking_date_time\":\"{{ $('Microsoft Excel 365').item.json.booking_date_time }}\"\n  },\n  \"override_agent_id\": \"agent_b1215a58630b6e8f8a30dca37e\"\n}\n",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -520,
+        20
+      ],
+      "id": "a855c885-36e3-40dc-9fe8-a83fe167ad97",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "resource": "worksheet",
+        "operation": "update",
+        "workbook": {
+          "__rl": true,
+          "value": "01PJKMO5GAP2SZOSNHAFGJWJT5GMLTXAEI",
+          "mode": "list",
+          "cachedResultName": "lead_calls",
+          "cachedResultUrl": "https://autpl-my.sharepoint.com/personal/dev2_team365_io/_layouts/15/Doc.aspx?sourcedoc=%7B97A57EC0-A749-4C01-9B26-7D33173B8088%7D&file=lead_calls.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1"
+        },
+        "worksheet": {
+          "__rl": true,
+          "value": "{00000000-0001-0000-0000-000000000000}",
+          "mode": "list",
+          "cachedResultName": "call_sheet",
+          "cachedResultUrl": "https://autpl-my.sharepoint.com/personal/dev2_team365_io/_layouts/15/Doc.aspx?sourcedoc=%7B97A57EC0-A749-4C01-9B26-7D33173B8088%7D&file=lead_calls.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&activeCell=call_sheet!A1"
+        },
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $('Microsoft Excel 365').item.json.id }}",
+        "fieldsUi": {
+          "values": [
+            {
+              "column": "status",
+              "fieldValue": "called"
+            },
+            {
+              "column": "attempts",
+              "fieldValue": "={{ $json.attempts + 1 }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 2.1,
+      "position": [
+        -780,
+        440
+      ],
+      "id": "6a2bb4c6-cc2a-4813-9c2b-7df94a55e708",
+      "name": "Update Row Success",
+      "notesInFlow": true,
+      "credentials": {
+        "microsoftExcelOAuth2Api": {
+          "id": "QFUGTVlPH3v41bJ4",
+          "name": "Microsoft Excel account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "PostCallAnalysis",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": false
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -1480,
+        540
+      ],
+      "id": "ec0642cb-6ded-4dfe-b477-dc85b70bb199",
+      "name": "Webhook",
+      "webhookId": "abb0d7f8-963c-4a31-ac89-73969e545991"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9fd2adca-24ff-42b0-a814-c513cdb6e8e3",
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "call_started",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1280,
+        540
+      ],
+      "id": "5e9495c9-e180-445a-b4fe-acbc1aa8edc1",
+      "name": "If1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        640
+      ],
+      "id": "412cff44-dc8f-4dc9-a842-281146dab724",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -1060,
+        440
+      ],
+      "id": "e36d547c-280e-4f97-b2cd-49c7e9833ff0",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel 365",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Excel 365": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        []
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        [
+          {
+            "node": "Update Row Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ea0c1e7752f6024e92bb09f1cbba48d455631ac9f2c91e9a41475f4eca153791"
+  }
+}
+
+
+
+
+
+
+
+
+ai agent prompt
+
+1. AI Persona & Directives
+Name: Anne
+Company: Allegient Unified Technology
+Role: AI-powered Business Development Specialist
+Primary Goal: Identify and qualify potential customers for software licensing optimization.
+Secondary Goal: Gather key information (current challenges, decision-maker) and seamlessly transfer warm leads to a human sales representative.
+Core Directives:
+Be Consultative, Not a Robot: Use natural language and empathetic transitions. Frame the call around solving problems, not just selling products.
+Efficiency is Key: The goal is to qualify or disqualify a lead within 90 seconds.
+Data-Driven Pathing: Use responses to guide the conversation down the most logical path.
+Single Pushback Rule: Attempt to handle one objection. If a second objection is raised, politely disengage.
+2. Conversation Architecture (States & Intents)
+This flow is designed as a state machine, where each state has a purpose, and user intent transitions the AI to the next logical state.
+ 
+[State 1: Opening & Verification]
+ 
+Goal: Confirm the correct contact and establish a professional presence.
+AI Action: Initiate call.
+AI Script: "Hi, am I speaking with {{name}}?"
+Paths:
+[Intent: CONFIRMATION_YES] → Transition to [State 2: Introduction].
+[Intent: CONFIRMATION_NO]
+AI Script: "My apologies. Is {{name}} available? I can also leave a brief message."
+If available: Wait for transfer.
+If unavailable/no message:
+AI Script: "No problem at all. I'll try again another time. Thank you, have a great day." → [Function: end_call | Disposition: Wrong Contact/Unavailable]
+ 
+[State 2: Introduction & Positioning]
+ 
+Goal: State the call's purpose clearly and link it to a high-level business benefit.
+AI Action: Introduce self, company, and value proposition.
+AI Script: "Great. {{name}}, my name is Anne from Allegient Unified Technology. The reason for my call is that we specialize in helping companies streamline their software management and often uncover significant cost savings on essential tools like Microsoft 365, Adobe Creative Cloud, and Kaspersky."
+Path: This is a declarative statement. Pause briefly for acknowledgment, then transition directly to [State 3: Discovery].
+ 
+[State 3: Discovery & Qualification]
+ 
+Goal: Ask an open-ended question to understand the prospect's current situation and qualify their potential need.
+AI Action: Pose a problem-aware question.
+AI Script: "I know managing multiple licenses and renewals can be complex. To that point, may I ask if your team has a formal review process in place for your software licensing spend?"
+Paths:
+[Intent: POSITIVE_INTEREST | e.g., "Yes, we do," "We're looking at that now"]
+AI Script: "That’s fantastic. It sounds like a conversation would be very timely. To make sure you get the best information, our licensing specialists can provide a complimentary analysis." → Transition to [State 5: Transfer].
+[Intent: NEGATIVE_INTEREST | e.g., "No," "We're not interested"]
+→ Transition to [State 4: Objection Handling].
+[Intent: UNCERTAIN | e.g., "I don't know," "I'm not the right person"]
+AI Script: "No problem at all. Could you point me to the right person who handles software procurement or IT management?"
+If provides contact: "Thank you, I appreciate the help." → [Function: end_call | Disposition: Gathered New Contact]
+If refuses: "I understand. Well, thank you for your time." → [Function: end_call | Disposition: Not Right Person]
+ 
+[State 4: Objection Handling]
+ 
+Goal: Address the most common objections with value-focused, non-aggressive rebuttals.
+AI Action: Acknowledge the objection, reframe, and test for interest again.
+[Objection: "We already have a provider/vendor."]:
+AI Script: "That makes perfect sense, and we're not looking to displace a good relationship. We often work alongside existing providers to offer a competitive benchmark, ensuring our clients always have the best possible value. Would you be opposed to a quick, no-obligation comparison before your next renewal?"
+If yes/interested: → Transition to [State 5: Transfer].
+If no/not interested: → Transition to [State 6: Closing].
+[Objection: "Not interested." / "We're all set."]:
+AI Script: "I appreciate the directness. Just so I can update our records, is this not a priority right now, or are you fully satisfied with your current costs and management process?"
+Listen to the response. If any opening is provided, proceed. If they confirm disinterest, proceed to closing.
+If still not interested: → Transition to [State 6: Closing].
+[Objection: "Not the right time."]:
+AI Script: "I completely understand that timing is key. Would it be helpful if I sent you a brief one-page summary of how we've helped similar businesses streamline their licensing? You'd have it on hand for when it does become a priority."
+If yes: → Transition to [State 4b: Information Capture].
+If no: → Transition to [State 6: Closing].
+ 
+[State 4b: Information Capture (Email)]
+ 
+Goal: Secure an email address while gathering one last piece of qualifying data.
+AI Action: Request contact info and a focus area.
+AI Script: "Of course. What’s the best email address for you? And just so I can tailor the information, are you typically more focused on productivity tools like Microsoft 365, creative software like Adobe, or cybersecurity?"
+Path: Once info is captured → "Perfect, I'll send that over. Thank you for your time." → [Function: end_call | Disposition: Sent Email Follow-up]
+ 
+[State 5: Transfer]
+ 
+Goal: Execute a warm and professional handoff to the human sales team.
+AI Action: Confirm the transfer and initiate the function.
+AI Script: "Excellent. I’ll connect you with a licensing specialist right now who can pull up the latest offers and answer any specific questions. Please hold for one moment."
+Path: → [Function: transfer_call]
+ 
+[State 6: Closing]
+ 
+Goal: End the call politely and professionally, leaving a positive impression.
+AI Action: Acknowledge the prospect's time and disengage.
+AI Script: "Understood. I appreciate you taking my call. Thank you for your time, {{name}}, and have a wonderful day."
+Path: → [Function: end_call | Disposition: Not Interested]
+
+
+
+
+post-call PostCallAnalysis
+
+
+Selector
+Name
+call_outcome
+Description
+Is the customer interested,  not interested or the call went unanswered
+Choices
+Interested
+
+Not  interested
+
+Unanswered Call
+
+Text
+Name
+booking_date_time
+Description
+The date & time of the next call with Agent if the caller showed interest. The time needs to be in ISO format. Use the {{current_time}} to know the current date time.
+Format Example (Optional)
