@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <meta name="google-site-verification" content="HPzodzLZG7z561VxrUa37hNUYWcbDOMnpQfhsx_Zl0A" />		
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="indexlive.css" />
+    <link rel="stylesheet" href="rgallive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer' ? '&l='+l : '';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8BBF32Z');
+</script>
+<!-- End Google Tag Manager -->
+  <title>allegient unified technology</title>
+  <style>
+    .contact-info p a{
+    text-decoration: none;
+    color: #FFFEFB;
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-left: 0;
+    font-family: "SafiroMedium";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 212.037%;
+}
+
+.contact-info p:hover{
+  transform: translateX(5px);
+  color: #f2cdcf;
+  transition: transform 0.3s ease, padding-left 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .contact-info p a {
+        font-size: 0.8rem;
+    }
+    .social-icons a img {
+    width: 14px;
+    height: 14px;
+    filter: invert(1);
+    transition: filter 0.3s ease;
+}
+    
+}
+
+.footer-column p {
+  font-size:0.7rem;
+}
+/* Default size (desktop/laptop) */
+.contact-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Mobile view */
+@media (min-width: 768px) {
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.contact-info p a{
+   color: #FFFEFB;
+}
+
+/* Default size (desktop/laptop) */
+.contact-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Mobile view */
+@media (min-width: 768px) {
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+ .arrow-img {
+    width: 96px;
+   height: 64px;
+  aspect-ratio: 40 / 41;
+  object-fit: contain;
+  transform: rotate(180deg); /* Agar by default left hai to 180deg rotate kro */
+}
+
+.submit-btn{
+  font-family: "MiedingerBold" !important;
+}
+/* ---- Mobile: force slide-2 completely out of layout ----
+   Using multiple properties to guard against other rules that might keep it visible */
+@media (max-width: 991.98px) {
+  .slide-2 {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    position: relative !important; /* reset any accidental absolute positioning */
+  }
+
+  /* safety: prevent any horizontal page scroll */
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+   @media (min-width: 768px) {
+  .painting-block {
+    padding:0px 160px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .prefooter-icon {
+        position: relative;
+        width: 510px;
+        height: 280px;
+        flex-shrink: 0;
+        aspect-ratio: 255 / 254;
+    }
+    .nav-arrow {
+        right: -70px !important;
+        bottom: -20px !important;
+    }
+}
+
+.circus-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px;
+  background: url("assets/rgal/elements/monkey.png") no-repeat right center; /* image on right */
+  background-size: contain;        /* show full image */
+  background-attachment: fixed;
+  background-color: #000;          /* fill empty space with black */
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: center;         /* horizontally center the content */
+  flex-direction: column;          /* stack heading + content vertically */
+  align-items: center;             /* center items horizontally */
+  text-align: center;              /* center text */
+}
+
+
+.circus-content {
+  position: relative;
+  z-index: 2;              
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.paintings-section {
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Horizontal flex */
+.cases-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh; /* full screen */
+}
+
+/* Each slide takes full viewport width */
+.case-item {
+  flex: 0 0 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center;     /* centers horizontally */
+  padding: 2rem;
+  text-align: center;
+}
+
+.case-item img {
+  width: 70%;
+  /* max-width: 800px; */
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.painting-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.painting-info p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .case-item img {
+    width: 90%;
+  }
+  .painting-info h3 {
+    font-size: 1.5rem;
+  }
+  .painting-info p {
+    font-size: 1rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+      <!-- Google Tag Manager (noscript) -->		
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8BBF32Z"		
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>		
+<!-- End Google Tag Manager (noscript) -->
+  <div class="cursor-circle"></div>
+    <div class="container-fluid" style="cursor:pointer ; padding: 0px;">
+         <!-- Hero Section -->
+      <section class="hero-section position-relative text-center text-lg-start">
+      <!-- Right Icon Dots Image -->
+          <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+                    <div class="menu">
+                 <a href="whoweare.html" class="anim-text">WHO WE ARE</a>
+                    <a href="whatwedo.html" class="anim-text">WHAT WE DO</a>
+                    <a href="#" class="anim-text" id="ourBrand">OUR BRANDS</a>
+                    </div>
+
+                    <div class="services" id="servicesBlock">
+                      <div class="branding">
+                          <p><a href="rgadesign.html" target="_self" style="text-decoration: none; color: #fff;">RGA DESIGN LLP</a></p>
+                          <p><a href="casaparadox.html" target="_self" style="text-decoration: none; color: #fff;">CASA PARADOX LUXE<a></p>
+                          <p><a href="casapop.html" target="_self" style="text-decoration: none; color: #fff;">CASA POP</a></p>
+                          <p><a href="arzaani.html" target="_self" style="text-decoration: none; color: #fff;">ARZAANI</a></p> 
+                          <p><a href="rgal.html" target="_self" style="text-decoration: none; color: #fff;">RASEEL GUJRAL ART LEGACY</a></p> 
+                          <p><a href="satishgujral.html" target="_self" style="text-decoration: none; color: #fff;">SATISH GUJRAL ART</a></p>
+                      </div>
+                    </div>
+
+                    <div class="menu">
+                     <a  href="letstalk.html" class="anim-text">LET'S CONNECT</a>
+                    </div>
+
+            
+                    <div class="video-block">
+                      <video autoplay muted loop playsinline width="100%" height="auto" style="border-radius: 4px;">
+                          <source src="assets/paradox.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video>
+                        <!-- Play Button -->
+                      <!-- <button id="playBtn" class="play-button">
+                        ▶
+                      </button> -->
+                    </div>
+          </div>
+        <a href="index.html">
+          <video src="assets/Logo.webm" autoplay loop muted playsinline preload="auto" class="position-absolute z-2 logo-video"></video>
+        </a>
+  
+        <!-- Main Heading & Butterfly in Two Columns -->
+        <div class="container mt-0 pt-0 mt-md-5 pt-md-5 p-0">
+              <!-- Top Right Text & Button -->
+            <div class="mt-5 pe-3 pe-md-5" style="max-width: 515px; margin-left: auto;">
+                <p class="hero-sec-des">
+                I am Sifar, an artist, a collaborator, a dreamer, and a questioner. I exist within the paradox, forever asking: Is this my circus?
+                </p>
+                <div class="button-component text-end">
+                  <a href="letstalk.html" class="hero-sec-btn">
+                    <div class="label-clip">
+                      <div class="button-label">LET’S connect</div>
+                      <div class="button-label">LET’S connect</div>
+                    </div>
+                  </a>
+               </div>
+
+            </div>
+          <div class="row align-items-center" style="padding: 50px 0px;">
+              <div class="col-lg-8 text-start"> <!-- remove text-center -->
+                <div class="hero-container d-flex justify-content-start align-items-start">
+                  <div class="hero-headline-wrapper d-flex flex-column align-items-start text-start">
+                    <div class="headline-clip one"><div class="hero-heading text-start m-0">raseel</div></div>
+                    <div class="headline-clip two"><div class="hero-heading text-start m-0">gujral</div></div>
+                    <div class="headline-clip three"><div class="hero-heading text-start m-0">art</div></div>
+                    <div class="headline-clip four"><div class="hero-heading text-start m-0">legacy</div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                <img src="assets/rgal/elements/rgal.png" alt="Butterfly" class="img-fluid tilt-img butterfly-cls"> 
+              </div>
+          </div>
+          <!-- Quote -->
+    <h2 class="quote-text text-center">
+      “Art emerges when multiple sensorial influences are translated”
+    </h2>
+
+    <!-- Signature -->
+    <p class="quote-signature text-end">– Raseel</p>
+
+    <!-- Paragraph 1 -->
+    <p class="para">
+      Expanding her creative spectrum, Raseel co-founded RGAL in 2012 as an art advisory, curatorial, and creative initiative for select patrons, embodying
+      The Spirit of Legacy.
+    </p>
+
+    <!-- Paragraph 2 -->
+    <p class="para">
+      This endeavour added a deeply resonant facet to her multifaceted legacy. The evolution of the RGAL initiative is to journey on a path that seamlessly blends art, design, and technology, creating transformative multisensory experiences and pushing the boundaries of conventional art forms.
+    </p>
+
+        </div>
+      </section>
+      
+
+
+    <section class="circus-section container">
+        <!-- Heading -->
+        <h1 class="circus-heading">
+          IS THIS MY CIRCUS <span>?</span>
+        </h1>
+
+
+    <!-- Signature + Center Icon + 2025 -->
+    <div class="signature-block text-center">
+      <span class="sig-text">Sifar</span>
+      <img src="assets/rgal/elements/sifar.png" alt="Middle Icon" class="middle-img">
+      <span class="year-text">2025</span>
+    </div>
+
+        <!-- Monkey Image -->
+        <!--<img src="assets/rgal/elements/monkey.png" alt="Monkey" class="monkey-img">-->
+
+        <!-- Content -->
+        <div class="circus-content">
+          <p><strong>I Am Sifar</strong><br>Is This My Circus?</p>
+
+          <p>I dream. The spark of an idea forms vivid, elusive, layered with emotions drawn from memory, imagination, and intuition. But a dream is never static. It evolves. 
+            In collaboration with AI, I explore its depths through an intense dialogue, where unexpected possibilities unfold. Together, we generate an image imbued with emotions 
+            nostalgia, wonder, or perhaps the quiet unease of curiosity. The result always surprises me, as if the dream reveals itself fully for the first time, no longer mine but something shared with the unknown.</p>
+          <p>Seeing this vision, I collaborate with my team, who are integral with their skills, to refine it, carefully introducing elements that complete the story I wish to tell. It’s a process of co-creation, where logic and instinct meet to shape the chaos. Once this digital reflection is perfected, it transforms from concept into something tangible a foundation on which the rest of the journey is built.</p>
+
+          <p>We then turn to artisanal studios, where master craftsmen bring their expertise to translate this vision into watercolor. Their hands breathe life into every stroke, infusing the work with texture and depth that only tradition can provide. Here, the dream is reborn, bridging the contemporary with the handmade, merging technology with the timeless touch of artistry.
+        </p>
+
+          <p>And yet, as each creation comes to life, I can’t help but ask: Is this really my circus, or am I merely one of its performers? In the act of creation, control is both necessary and illusory, and the line between ringmaster and participant often blurs. What begins as a whisper of thought becomes a vivid expression of emotion a story shared across 
+           mediums, cultures, and disciplines.
+           </p>
+      <p>Perhaps, in the end, that’s the beauty of it. Each creation asks me again: Is this my circus? Or am I the monkey?</p>
+      <p>The artist, perhaps, is a paradox both the dreamer and the craftsman, and yet neither at the same time. The dreamer gives birth to the idea, but the one who paints, who 
+    refines, and collaborates also shapes the outcome. Without either, the creation would be incomplete. Maybe the artist is the bridge the one who navigates the chaos of 
+    dreaming, directing, and surrendering. Or perhaps the true artist is the process itself, a living entity that transcends ownership, where the dreamer, the painter, the AI, and the artisans all play their part.
+    </p>
+    <p>And so, I ask again: Is this my circus? Or am I the monkey?
+    </p>
+          <p>I Am Sifar</p>
+          <p>This paradox of authorship finds its embodiment in Sifar, my symbolic signature. The word, written in Urdu, carries personal significance my father signed his early works in Urdu, and I now carry forward that tradition in a new form. Sifar is a seal, a mark that transcends individual ownership, embodying humility, infinite potential, and cultural 
+    connection .
+    </p>
+    <p>Like the zero, Sifar holds within it both emptiness and boundless possibility a space where ideas, dreams, and collaboration come to life. It rejects singular authorship, 
+    embracing co-creation. It is an identity, yet it is nameless.
+    </p>
+    <p>The circular form enclosing Sifar mirrors this infinite cycle creation without an end, authorship without ego. The mark is embossed or debossed, a subtle imprint rather than a claim. It is not a signature of ownership, but a testament to the process.
+    </p>
+    <p>
+    I am Sifar, an artist, a collaborator, a dreamer, and a questioner. I exist within the paradox, forever asking: Is this my circus?</p>
+        </div>
+    </section>
+
+
+<section class="paintings-section">
+  <div class="cases-carousel">
+    <div class="painting-block case-item">
+       <img src="https://placehold.co/1920x1080" alt="My Raj">
+       <div class="painting-info">
+      <h3 class="painting-title">MY RAJ</h3>
+      <p class="painting-desc">
+        A nuanced reflection on personal perceptions of independence. Through this lens, the circus becomes a stage for exploring the intertwining of history and identity, 
+       where liberation is both a celebration and a source of introspection. 
+      </p>
+       </div>
+    </div>
+
+    <div class="painting-block case-item">
+         <img src="https://placehold.co/1920x1080" alt="War of the Roses">
+         <div class="painting-info">
+            <h3 class="painting-title">WAR OF THE ROSES</h3>
+            <p class="painting-desc">
+                Clad in uniformity, the performers resemble an army yet their weapons are roses. 
+                This tongue-in-cheek tableau explores the tensions of performative peace and veiled 
+                rivalry, where civility conceals competition, and affection becomes its own battlefield.
+            </p>
+         </div>
+    </div>
+
+    <div class="painting-block case-item">
+        <img src="https://placehold.co/1920x1080" alt="Diamonds are forever">
+        <div class="painting-info">
+        <h3 class="painting-title">diamonds are forever</h3>
+        <p class="painting-desc">
+            A suave vignette from the circus of subterfuge where style meets stealth, and espionage wears a velvet glove.Sports cars purr with calculated flair, dice tumble like coded messages, and every gesture is part of a top-secret      ballet. Here, the chase is dapper, the mission classified. Predators swoop in under spotlight and shadow,but it’s the sly mole  our unlikely insider who feasts on the spoils of the grand diamond heist. A tongue-in-cheek homage to 007, where glamour conceals guile,and the circus always has a double act.
+        </p>
+        </div>
+    </div>
+
+    <div class="painting-block case-item">
+        <img src="https://placehold.co/1920x1080" alt="My Raj">
+        <div class="painting-info">
+        <h3 class="painting-title">brothers in arms</h3>
+        <p class="painting-desc">
+            A sharp yet playful take on Shikaar and the pursuits of a gentleman’s past. This subset blends the primal and the cultivated, juxtaposing camaraderie and conquest while questioning the rituals that define power and tradition.
+        </p>
+        </div>
+    </div>
+
+    <div class="painting-block case-item">
+        <img src="https://placehold.co/1920x1080" alt="War of the Roses">
+        <div class="painting-info">
+            <h3 class="painting-title">BIRDS OF A FEATHER</h3>
+            <p class="painting-desc">
+                A rakish tableau of simian playboys—plumed and poised. Peacocks with side-eyed sass, jeeps growling with idle bravado, billiard cues marking time, and cards shuffled not for stakes but for stature. Here, the theatre of “healthy male pursuits” unfolds unfiltered  unfazed by modern decorum,laced with the mischief of an era when masculinity was worn like cologne: bold, 
+                lingering, and unapologetic. Fraternity struts in feathered form, the peacock both emblem and observer of a circus where camaraderie performs with vanity, & wit. 
+            </p>
+        </div>
+    </div>
+    <div class="painting-block case-item">
+        <img src="https://placehold.co/1920x1080" alt="Diamonds are forever">
+        <div class="painting-info">
+        <h3 class="painting-title">his master’s voice</h3>
+        <p class="painting-desc">
+            A wry, insouciant lens on dominion and desire where the panther, sleek with latent power, submits not to force, but to the glinting seduction of fragile chains. Diamonds delicate yet 
+            binding tether the beast to the will of its Simian master. A hypnotic inversion of control, where the illusion of power lies in the shimmer between obedience and instinct.
+        </p>
+        </div>
+    </div>
+    <div class="painting-block case-item">
+        <img src="https://placehold.co/1920x1080" alt="Diamonds are forever">
+        <div class="painting-info">
+        <h3 class="painting-title">rose tinted glasses</h3>
+        <p class="painting-desc">
+            A whimsical yet poignant exploration of denial. Here, the performers immerse themselves in comforting illusions, revealing the human propensity to cling to falsehoods when reality 
+            becomes too difficult to bear.
+        </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="sculpture-section container-fluid py-5">
+  <!-- Heading -->
+  <div class="text-center mb-4">
+    <h2 class="sculpture-heading">SCULPTURE</h2>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-12 col-lg-10">
+      <img src="assets/rgal/elements/6330c.png" alt="Sculpture Hero" class="img-fluid sculpture-img">
+    </div>
+  </div>
+
+  <!-- Title + Description -->
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-12 col-md-10 col-lg-8">
+      <h3 class="sculpture-subheading">DEVI | DIVA | DAMSEL</h3>
+      <p class="sculpture-desc">
+        The concept encompasses the multifaceted nature of womanhood and femininity.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sculpture Grid -->
+  <div class="row g-4 justify-content-center">
+    <!-- White -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <img src="assets/rgal/elements/3b41.jpg" alt="White Sculpture" class="img-fluid sculpture-img">
+    </div>
+    <!-- Black -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <img src="assets/rgal/elements/86dd.jpg" alt="Black Sculpture" class="img-fluid sculpture-img">
+    </div>
+    <!-- Brown -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <img src="assets/rgal/elements/5dde.jpg" alt="Brown Sculpture" class="img-fluid sculpture-img">
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- ===== prefooter Section ===== -->
+
+    <div class="slide-container" id="slideContainer">
+              <!-- Slide 1 - Let's Get Started -->
+              <div class="slide slide-1">
+                  <div class="slide-content pb-5 p-md-0">
+                      <h1 class="main-title">
+                          LET'S<br>
+                          begin a<br>
+                           dialogue
+                      </h1>
+                      <div class="description-container">
+                      <p class="description">
+                          Ready to turn your vision into something real? So are we.
+                        </p> 
+                        <p class="description">
+                            Share your contact information and we’ll get back to you to discuss next steps.
+                          </p>
+                      </div>
+                  </div>
+                  <!-- Replace your existing icon wrapper with this -->
+                    <div
+                      class="nav-arrow prefooter-icon-clip"
+                      role="button"
+                      aria-label="Next slide"
+                      tabindex="0"
+                      onclick="slideToNext()"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+                    >
+                      <div class="prefooter-icon" aria-hidden="true">
+                        <!-- default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+
+                        
+
+                        <!-- hover state -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+              </div>
+              <!-- Slide 2 - Ask for Callback -->
+            <div class="slide slide-2 d-none d-lg-flex">
+              <!-- Left Arrow -->
+                  <div
+                    class="nav-arrow prefooter-icon-clip-left"
+                    role="button"
+                    aria-label="Previous slide"
+                    tabindex="0"
+                    onclick="slideToFirst()"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+                  >
+                        <div class="prefooter-icons" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                            <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                            <g>
+                              <line class="prefooter-arrow" x1="50" y1="30" x2="10" y2="30"></line>
+                              <polyline class="prefooter-arrow" points="25,10 10,30 25,50"></polyline>
+                            </g>
+                          </svg>
+                        </div>
+                  </div>
+
+                  <!-- Right Form -->
+                  <div class="form-section">
+                    <h2 class="form-title">ASK FOR A CALL BACK</h2>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="eg. xyz">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Number</label>
+                          <input type="tel" class="form-control" placeholder="987654321">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+    </div>
+
+        <!-- Mobile Only Callback Form -->
+<div class="container py-4 d-lg-none bg-black text-white">
+  <div class="row justify-content-between align-items-center mb-4">
+    <div class="col" style="max-width: 301px;">
+      <h2 class="text-uppercase mb-0" style="line-height: 1.1; color: #FFF;font-family: MiedingerBold;font-size: 28px;font-style: normal;font-weight: 700; line-height: 100%;"> 
+        ASK FOR
+        A CALL 
+        BACK
+      </h2>
+    </div>
+    <div class="col-auto">
+      <!-- Arrow image -->
+      <img src="assets/arrow.png" alt="Arrow" class="arrow-img">
+    </div>
+  </div>
+
+  <form>
+    <div class="mb-3" style="color: #FFF;font-family: SafiroMedium;font-size: 24px;font-style: normal;font-weight: 500;line-height: normal;">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control bg-black text-white border-0 border-bottom rounded-0" id="name" placeholder="eg. xyz">
+    </div>
+
+    <div class="mb-3">
+      <label for="number" class="form-label" style="white-space: nowrap;">Contact Number</label>
+      <input type="text" class="form-control bg-black text-white border-0 border-bottom rounded-0" id="number" placeholder="9887654321">
+    </div>
+
+    <!-- Left aligned button -->
+    <div class="text-start">
+      <button type="submit" class="submit-btn m-0">SUBMIT</button>
+    </div>
+  </form>
+</div>
+
+     <!-- Footer -->
+    <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between   mt-5 gap-sm-0 gap-md-0 gap-lg-0 gap-xl-0 gap-4 p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-0 pt-md-3 pt-lg-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="#">ABOUT</a></li>
+                          <li><a href="letstalk.html">CONTACT</a></li>
+                          <li><a href="#">AWARDS</a></li>
+                          <li><a href="#">MEDIA</a></li>
+                          <li><a href="#">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                          <p><a href="#">Cookie Policy</a></p>
+                          <p><a href="#">Copyright Policy</a></p>
+                          <p><a href="#">Privacy Policy</a></p>
+                          <p><a href="#">Product Information</a></p>
+                          <!--<p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>-->
+                          </div>
+                      </div>
+                      </div>
+
+                    <!-- Column 3 -->
+                  <div class="col-12 col-md-12 col-lg-4 ps-md-4 mt-md-4 mt-lg-0">
+                    <div class="footer-column text-center text-lg-start">
+                        
+                        <!-- Phone + Email with icons -->
+                        <div class="contact-info mb-3">
+                        <p class="mb-1 d-flex align-items-center justify-content-start justify-content-lg-start">
+                            <!-- Phone Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="me-2 contact-icon" viewBox="0 0 16 16" fill="white">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.7a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.01c-.365-1.031-.04-2.137.7-2.877z"/>
+                            </svg>
+                            <a href="tel:+911234567890" class="text-decoration-none">+919313746825</a>
+                        </p>
+
+                        <p class="mb-0 d-flex align-items-center justify-content-start justify-content-lg-start">
+                            <!-- Email Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="me-2 contact-icon" viewBox="0 0 16 16" fill="white">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757ZM10.197 8.243 16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                            <a href="connect@raseelgujralansal.com" class="text-decoration-none">connect@raseelgujralansal.com</a>
+                        </p>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="social-icons d-flex justify-content-start justify-content-lg-start">
+                          <a href="https://www.youtube.com/@RaseelGujralAnsal" class="me-2">
+                            <img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube">
+                          </a>
+                          <a href="https://www.instagram.com/raseelgujralansalofficial/" class="me-2">
+                            <img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram">
+                          </a>
+                          <a href="https://www.facebook.com/share/16rnA1tZCN/" class="me-2">
+                            <img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook">
+                          </a>
+                            <a href="https://www.linkedin.com/in/raseelgujralansal/"  class="me-2">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" 
+                                alt="LinkedIn" style="fill:#0A66C2;">
+                            </a>
+
+                          <a href="#" class="me-2">
+                            <img src="https://simpleicons.org/icons/pinterest.svg" alt="Pinterest">
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+
+
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+             <div class="footer-logo position-relative d-inline-block w-100 no-wrap-logo">
+               RASEE<span id="raseel-l" class="raseel-l">L<span class="butterfly-class">
+            <!-- <video src="assets/Butterfly.webm"
+                   autoplay
+                   loop
+                   muted
+                   playsinline
+                   preload="auto"
+                   class="butterfly-video">
+            </video> -->
+                <img src="assets/Layer-15-A.gif" alt="Butterfly" class="butterfly-video" />
+                </span>
+              </span>
+            </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+    </section>
+    
+     <a href="https://wa.me/919313746825" 
+           class="whatsapp-float" 
+           target="_blank" 
+           aria-label="Chat on WhatsApp" 
+           data-bs-toggle="tooltip" 
+           data-bs-placement="left" 
+           title="Chat with us">
+           <i class="fa-brands fa-whatsapp"></i> </a>
+  </div>
+  
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+ 
+   <!--substring for 250 words  -->
+<script>
+document.querySelectorAll(".painting-desc").forEach(desc => {
+  let fullText = desc.innerText.trim();
+  let limit = 250; // characters (not words)
+
+  if (fullText.length > limit) {
+    let shortText = fullText.substring(0, limit) + "...";
+    desc.setAttribute("data-full", fullText);
+    desc.innerText = shortText;
+
+    // Add "Read More" button
+    let btn = document.createElement("button");
+    btn.innerText = "Read More";
+    btn.style.border = "none";
+    btn.style.background = "transparent";
+    btn.style.color = "#007bff";
+    btn.style.cursor = "pointer";
+    btn.style.marginTop = "5px";
+
+    btn.addEventListener("click", () => {
+      if (desc.innerText === shortText) {
+        desc.innerText = fullText;
+        btn.innerText = "Show Less";
+      } else {
+        desc.innerText = shortText;
+        btn.innerText = "Read More";
+      }
+    });
+
+    desc.insertAdjacentElement("afterend", btn);
+  }
+});
+</script>
+
+   <!--caurosel-->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".case-item");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".cases-carousel",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + (sections.length * window.innerWidth)
+  }
+});
+</script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  ScrollTrigger.matchMedia({
+    "(min-width: 992px)": function () {
+      gsap.to(".headline-clip.one", {
+        x: "-25vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.9
+        }
+      });
+
+      gsap.to(".headline-clip.two", {
+        x: "50vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+
+      gsap.to(".headline-clip.three", {
+        x: "25vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 1.2
+        }
+      });
+
+      gsap.to(".headline-clip.four", {
+        x: "-10vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.8
+        }
+      });
+    },
+
+  
+    "(max-width: 991px)": function () {
+      gsap.to(".headline-clip.one", {
+        x: "-10vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+
+      gsap.to(".headline-clip.two", {
+        x: "20vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+
+      gsap.to(".headline-clip.three", {
+        x: "14vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.7
+        }
+      });
+
+      gsap.to(".headline-clip.four", {
+        x: "-6vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.5
+        }
+      });
+    }
+
+  });
+</script>
+
+<!-- gsap scroll trigger-->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".content-col .block").forEach((block) => {
+      gsap.to(block, {
+        scrollTrigger: {
+          trigger: block,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+  </script>
+<!-- name section js -->
+   <script>
+   
+  gsap.registerPlugin(ScrollTrigger);
+
+  const namesList = document.querySelector("#namesList");
+  const items = gsap.utils.toArray(".names-item");
+  const itemHeight = items[0].offsetHeight;
+
+  gsap.to(namesList, {
+    y: () => -(items.length - 1) * itemHeight,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".names-section",
+      start: "top top",           // start when section hits top
+      end: "+=" + (items.length * itemHeight),
+      scrub: true,
+      pin: true,                  // keeps section pinned
+      anticipatePin: 1
+    }
+  });
+
+  </script>
+
+
+
+
+
+ <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+<!-- =================== END PREFOOTER (Poison-style) =================== -->
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const revealTexts = document.querySelectorAll(".reveal-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% visible
+  );
+
+  revealTexts.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+</script>
+<script>
+  const sidebar = document.getElementById("sidebar");
+
+  function toggleSidebar() {
+    if (!sidebar.classList.contains("open")) {
+     
+      sidebar.classList.add("open");
+    } else {
+     
+      sidebar.classList.remove("open");
+    }
+  }
+</script>
+        <!-- ✅ JS -->
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const who = document.getElementById("ourBrand");
+          const services = document.getElementById("servicesBlock");
+
+          if (!who || !services) return;
+
+          // helper: open block smoothly
+          function openBlock(el) {
+            el.style.maxHeight = el.scrollHeight + "px"; // auto height
+            el.classList.add("active");
+          }
+
+          // helper: close block smoothly
+          function closeBlock(el) {
+            el.style.maxHeight = "0px";
+            el.classList.remove("active");
+          }
+
+          // toggle function
+          function toggleBlock(el) {
+            if (el.classList.contains("active")) {
+              closeBlock(el);
+            } else {
+              openBlock(el);
+            }
+          }
+
+          // hover → open (but stays open)
+          who.addEventListener("mouseenter", function () {
+            openBlock(services);
+          });
+
+          // click → toggle
+          who.addEventListener("click", function () {
+            toggleBlock(services);
+          });
+        });
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
