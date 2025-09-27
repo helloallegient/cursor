@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Dialogue with Identity - Raseel Gujral Ansal's design journey" />
+  <meta name="keywords" content="Raseel Gujral, design, architecture, interior design, art, heritage" />
+  <meta name="author" content="Raseel Gujral Ansal" />
+  <meta name="google-site-verification" content="HPzodzLZG7z561VxrUa37hNUYWcbDOMnpQfhsx_Zl0A" />						
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="rgadesign.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+      <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer' ? '&l='+l : '';
+  j.async=true;
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8BBF32Z');
+</script>
+<!-- End Google Tag Manager -->
+  
+  <title>Allegient Unified Technology | RGA DESIGN</title>
+
+
+  <style>
+    .hero-section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    overflow: hidden;
+    color: #ffffff;
+}
+.contact-info p a{
+    text-decoration: none;
+    color: #FFFEFB;
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-left: 0;
+    font-family: "SafiroMedium";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 212.037%;
+}
+
+.contact-info p:hover{
+  transform: translateX(5px);
+  color: #f2cdcf;
+  transition: transform 0.3s ease, padding-left 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .contact-info p a {
+        font-size: 0.8rem;
+    }
+    .social-icons a img {
+    width: 14px;
+    height: 14px;
+    filter: invert(1);
+    transition: filter 0.3s ease;
+}
+    
+}
+
+.footer-column p {
+  font-size:0.7rem;
+}
+.estd {
+color: #C9BEA9;
+font-family: "MiedingerBold";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+/* Default size (desktop/laptop) */
+.contact-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* Mobile view */
+@media (min-width: 768px) {
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .slide-2 {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    position: relative !important; /* reset any accidental absolute positioning */
+  }
+
+  /* safety: prevent any horizontal page scroll */
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .prefooter-icon {
+        position: relative;
+        width: 510px;
+        height: 280px;
+        flex-shrink: 0;
+        aspect-ratio: 255 / 254;
+    }
+    .nav-arrow {
+        right: -70px !important;
+        bottom: -20px !important;
+    }
+}
+.arrow-img {
+    width: 96px;
+    height: 64px;
+    aspect-ratio: 40 / 41;
+    object-fit: contain;
+    transform: rotate(180deg);
+}
+
+.card-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover img,
+.card-hover video {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-hover .hover-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* hidden by default */
+  pointer-events: none;
+}
+
+
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7; /* ✅ or set to the ratio of your image */
+  overflow: hidden;
+}
+
+.media-wrapper img,
+.media-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ✅ ensures same scaling */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-hover:hover .main-img {
+  opacity: 0;
+}
+
+.card-hover:hover .hover-video {
+  opacity: 1;
+}
+
+.card-hover .hover-hide {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-hover:hover .hover-hide {
+  opacity: 0; /* ✅ only h2 hides */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->		
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8BBF32Z"		
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>		
+<!-- End Google Tag Manager (noscript) -->		
+  <div class="cursor-circle"></div>
+    <div class="container-fluid" style="cursor:pointer ; padding: 0px;">
+         <!-- Hero Section -->
+      <section class="hero-section position-relative text-center text-lg-start">
+      <!-- Right Icon Dots Image -->
+          <div class="hamburger d-block  mt-0 mt-lg-3 " onclick="toggleSidebar()">
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+            <div class="line">
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+              <span><img src="assets/icon.png" alt="icon"></span>
+            </div>
+          </div>
+          <!-- Sidebar -->
+          <div class="sidebar" id="sidebar">
+            <div class="close-icon" onclick="toggleSidebar()">✕</div>
+
+                    <div class="menu">
+                    <a href="whoweare.html" class="anim-text">WHO WE ARE</a>
+                    <a href="whtewedo.html" class="anim-text">WHAT WE DO</a>
+                    <a href="#" class="anim-text" id="ourBrand">OUR BRANDS</a>
+                    </div>
+
+                   <div class="services" id="servicesBlock">
+                      <div class="branding">
+                          <p><a href="rgadesign.html" target="_self" style="text-decoration: none; color: #fff;">RGA DESIGN LLP</a></p>
+                          <p><a href="casaparadox.html" target="_self" style="text-decoration: none; color: #fff;">CASA PARADOX LUXE<a></p>
+                          <p><a href="casapop.html" target="_self" style="text-decoration: none; color: #fff;">CASA POP</a></p>
+                          <p><a href="arzaani.html" target="_self" style="text-decoration: none; color: #fff;">ARZAANI</a></p> 
+                          <p><a href="rgal.html" target="_self" style="text-decoration: none; color: #fff;">RASEEL GUJRAL ART LEGACY</a></p> 
+                          <p><a href="satishgujral.html" target="_self" style="text-decoration: none; color: #fff;">SATISH GUJRAL ART</a></p>
+                      </div>
+                    </div>
+
+                   <div class="menu">
+                     <a  href="letstalk.html" class="anim-text">LET'S CONNECT</a>
+                    </div>
+
+            
+                    <div class="video-block">
+                      <video autoplay muted loop playsinline width="100%" height="auto" style="border-radius: 4px;">
+                          <source src="assets/paradox.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video>
+                        <!-- Play Button -->
+                      <!-- <button id="playBtn" class="play-button">
+                        ▶
+                      </button> -->
+                    </div>
+          </div>
+            <video src="assets/Logo.webm" autoplay="" loop="" muted="" playsinline="" preload="auto" class="position-absolute z-2 logo-video">
+            </video>
+  
+        <!-- Main Heading & Butterfly in Two Columns -->
+        <div class="container-fluid mt-0 pt-0 mt-md-5 pt-md-5 p-4">
+              <!-- Top Right Text & Button -->
+            <div class="mt-5 pe-3 pe-md-5" style="max-width: 515px; margin-left: auto;">
+                <p class="hero-sec-des text-md-start text-end">
+                    “The Spirit of Space,” rests on the belief that spaces are living narratives crafted with precision, infused with soul, and designed to resonate with the identity of those who inhabit them. We do not merely build or decorate; 
+                    we choreograph an experiential journey where form, function, and feeling converge seamlessly.
+                </p>
+                <div class="button-component text-md-start text-end">
+                  <a href="letstalk.html" class="hero-sec-btn">
+                    <div class="label-clip">
+                      <div class="button-label">LET’S CONNECT</div>
+                      <div class="button-label">LET’S CONNECT</div>
+                    </div>
+                  </a>
+               </div>
+
+            </div>
+            <div class="row align-items-center p-2">
+            <!-- Image -->
+            <div class="col-lg-4 text-center mt-4 mt-lg-0 order-2 order-lg-1">
+                <img src="assets/rgadesing/elements/b4fe975.png" alt="square" class="img-fluid custom-img">
+            </div>
+
+            <!-- Text -->
+            <div class="col-lg-8 text-end order-1 order-lg-2">
+                <div class="hero-container d-flex justify-content-start justify-content-md-end align-items-start">
+                <div class="hero-headline-wrapper d-flex flex-column align-items-end pe-md-4 pe-0">
+                    <div class="headline-clip one">
+                    <div class="hero-heading text-start m-0">RGA</div>
+                    </div>
+                    <div class="headline-clip two">
+                    <div class="hero-heading text-start m-0">DESIGN</div>
+                    </div>
+                    <div class="headline-clip three">
+                    <div class="hero-heading text-start m-0">LLP</div>
+                    </div>
+                    <div class="estd text-end m-0 d-none d-lg-block">the spirit of SPACE</div>
+                </div>
+                </div>
+            </div>
+            
+            </div>
+
+
+        </div>
+      </section>
+      
+      <!-- Top Heading -->
+    <div class="container-fluid" style="background: url(assets/rgadesing/elements/bg.png) lightgray 50% / cover no-repeat;">
+     <h2 class="text-uppercase pt-5 text-center heading-title">SPATIAL DESIGN</h2>
+      <section class="sticky-section" id="brand" style="padding-top: 6rem;">
+        <div class="sticky-wrapper">
+            
+          <h2 class="sticky-heading">Brand</h2>
+        </div>
+         
+        <div class="content-col">
+         <div class="block">
+            The Spirit of Space
+            Every environment is designed as a living organism breathing, evolving, and responding to its inhabitants
+            Luxury as a Language
+            True luxury is not ostentation, but the art of refinement, comfort, and meaning woven into every detail.
+            Rooted in Heritage, Global in Outlook
+            We draw upon India’s deep artisanal traditions while embracing global design 
+            innovation.
+         </div>
+        </div>
+      </section>
+      <!-- The Mission -->
+      <section class="sticky-section" id="mission">
+          
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">ethos</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">
+                Bespoke Storytelling 
+                Every space tells a story of the client, the culture, and the craft resulting in an 
+                experience that is entirely unique.
+                Sustainability with Integrity
+                We champion mindful sourcing, enduring materials, and ethical craftsmanship to ensure our work stands the test of time.
+                Collaboration as Creation 
+                We see our clients, artisans, and design teams as equal partners in a shared journey of co-creation.
+         </div> 
+         </div>
+      </section>
+            <!-- the -->
+      <section class="sticky-section" id="mission">
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">mission</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">
+                To create transformative spaces that embody luxury, soul, and authenticity, spaces that inspire, connect, and endure. We merge decades of design expertise with 
+                artisanal mastery and modern innovation, delivering environments that are as 
+                functionally refined as they are emotionally resonant.
+        </div>
+          </div>
+      </section>
+      <!-- The Vision -->
+      <section class="sticky-section" id="mission">
+        <div class="sticky-wrapper">
+          <h2 class="sticky-heading">vision</h2>
+        </div>
+        <div class="content-col">
+          <div class="block">
+                To be recognized as a global ambassador of Indian-rooted, world-minded design setting benchmarks in luxury spatial experiences that transcend trends, honour craftsmanship, and celebrate the unique identity of every client.
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <div class="py-5" style="background: url(assets/rgadesing/elements/bg2.png) lightgray -0.182px 0px / 100.019% 136.805% no-repeat;">
+        <div class="container">
+            <div class="row align-items-center text-white">
+               <!-- Text Content -->
+                <div class="col-lg-12 text-center text-lg-start mb-4 mb-lg-0 sec-heading-tilte">
+                    <h2 class="text-uppercase marg-bottom">Interior Design</h2>
+                    <h2 class="text-uppercase marg-bottom">ARCHITECTURE</h2>
+                    <h2 class="text-uppercase marg-bottom">INTERIOR ARCHITECTURE</h2> 
+                </div>
+            
+            </div>
+            </div>
+        </div>
+   </div>
+
+  
+  <div class="heaven-section">
+    <div class="heaven-overlay text-center">
+      <div class="container">
+        <div class="quote-text">
+          “Agar firdaus bar rū-e zamīn ast, hamīn ast-o hamīn ast-o hamīn ast”.<br />
+          <strong>- Amir Khusrau</strong>
+        </div>
+        <div class="english-quote mt-3">
+          “If there is heaven on earth, it is here, it is here, it is here”
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- comment video section -->
+<!-- <div class="ratio ratio-16x9">
+  <iframe src="assets/paradox.mp4" title="ARZAANI store VIDEO CLIP" allowfullscreen></iframe>
+</div> -->
+
+<div class="container-fluid px-0">
+
+
+    <!-- CARD 1 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <!-- Media wrapper (image + video stacked) -->
+      <div class="media-wrapper position-relative card-hover">
+          <!-- Image -->
+          <img src="3fc4c.jpg" class="img-fluid w-100 main-img" alt="India Modern 2012">
+
+          <!-- Video (hidden by default) -->
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+
+          <!-- Title (hide on hover) -->
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase ind-modern m-0 hover-hide">
+          India Modern
+          </h2>
+      </div>
+
+      <!-- ✅ Caption stays outside media (always below image/video) -->
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+          <div class="text-center text-md-start">Farm House</div>
+          <div class="text-center text-md-start">New Delhi 2012</div>
+      </div>
+    </div>
+    <!-- CARD 2 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+          <div class="media-wrapper position-relative card-hover">
+            <img src="assets/rgadesing/elements/3fc4c.jpg" class="img-fluid w-100" alt="Neo Classic 2019">
+             <!-- Video (hidden by default) -->
+            <video class="img-fluid w-100 hover-video" muted playsinline loop>
+            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+             <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase neo-classic m-0 hover-hide">Neo Classic</h2>
+          </div>
+          <div class="ps-2 pt-2 text-uppercase caption-bottom">
+            <div class="text-center text-md-start">Villa</div>
+            <div class="text-center text-md-start">Hyderabad 2019</div>
+          </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+        <img src="assets/rgadesing/elements/799f9.png" class="img-fluid w-100" alt="India Modern 2018">
+         <!-- Video (hidden by default) -->
+        <video class="img-fluid w-100 hover-video" muted playsinline loop>
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase ind2-modern  m-0 hover-hide">India Modern</h2>
+      </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Farm House</div>
+        <div class="text-center text-md-start">New Delhi 2018</div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+       <div class="media-wrapper position-relative card-hover">
+          <img src="assets/rgadesing/elements/28ed2.png" class="img-fluid w-100" alt="Contemporary">
+                   <!-- Video (hidden by default) -->
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase contem m-0 hover-hide">Contemporary</h2>
+       </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Farm House</div>
+        <div class="text-center text-md-start">New Delhi</div>
+      </div>
+    </div>
+
+        <!-- CARD 5 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+       <div class="media-wrapper position-relative card-hover">
+          <img src="assets/rgadesing/elements/8fd1ed.png" class="img-fluid w-100" alt="India Modern 2012">
+                             <!-- Video (hidden by default) -->
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase contem2 m-0 hover-hide">CONTEMPORARY</h2>
+       </div>
+      <!-- ✅ Caption outside image, left-aligned -->
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Farm House</div>
+        <div class="text-center text-md-start">New Delhi 2012</div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+       <div class="media-wrapper position-relative card-hover">
+          <img src="assets/rgadesing/elements/2e1db.png" class="img-fluid w-100" alt="Neo Classic 2019">
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>        
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase neo-classic2 m-0 hover-hide">Neo Classic</h2>
+      </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Villa</div>
+        <div class="text-center text-md-start">Delhi 2024</div>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>        
+          <img src="assets/rgadesing/elements/63015.png" class="img-fluid w-100" alt="India Modern 2018">
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase ind-modern m-0 hover-hide">India Modern</h2>
+      </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Resort</div>
+        <div class="text-center text-md-start">Goa 2018</div>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+          <img src="assets/rgadesing/elements/bb8af.png" class="img-fluid w-100" alt="Contemporary">
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>      
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase neo-classic2 m-0 hover-hide">Resort</h2>
+      </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Resort</div>
+        <div class="text-center text-md-start">Delhi</div>
+      </div>
+    </div>
+     
+     <!-- CARD 9 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+         <img src="assets/rgadesing/elements/fbdec.png" class="img-fluid w-100" alt="India Modern 2012">
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>      
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase modern m-0 hover-hide">Modern</h2>
+      </div>
+      <!-- ✅ Caption outside image, left-aligned -->
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Villa</div>
+        <div class="text-center text-md-start">Delhi 2024</div>
+      </div>
+    </div>
+
+    <!-- CARD 10 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+         <img src="assets/rgadesing/elements/a61b.png" class="img-fluid w-100" alt="Neo Classic 2019">
+          <video class="img-fluid w-100 hover-video" muted playsinline loop>
+          <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>     
+          <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase spritual m-0 hover-hide">SPIRITUAL SPACE</h2>
+      </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">SPIRITUAL CENTER</div>
+        <div class="text-center text-md-start">KURUKSHETRA</div>
+      </div>
+    </div>
+
+    <!-- CARD 11 -->
+   <div class="position-relative mb-4 p-md-4 p-0">
+    <div class="media-wrapper position-relative card-hover">
+      <img src="assets/rgadesing/elements/93b49.png" class="img-fluid w-100" alt="Neo Classic 2019">
+      <video class="img-fluid w-100 hover-video" muted playsinline loop>
+      <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+      </video>
+      <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase spritual m-0 hover-hide">SPIRITUAL SPACE</h2>
+    </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">SPIRITUAL CENTER</div>
+        <div class="text-center text-md-start">TANKARA</div>
+      </div>
+    </div>
+
+
+    <!-- CARD 12 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+        <img src="assets/rgadesing/elements/57143e.png" class="img-fluid w-100" alt="Contemporary">
+        <video class="img-fluid w-100 hover-video" muted playsinline loop>
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+        <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase modern2 m-0 hover-hide">Modern</h2>
+      </div>
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">APARTMENT</div>
+        <div class="text-center text-md-start">Delhi</div>
+      </div>
+    </div>
+
+        <!-- CARD 13 -->
+    <div class="position-relative mb-4 p-md-4 p-0">
+      <div class="media-wrapper position-relative card-hover">
+        <img src="assets/rgadesing/elements/ed6efa.png" class="img-fluid w-100" alt="India Modern 2012">
+        <video class="img-fluid w-100 hover-video" muted playsinline loop>
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+        <h2 class="position-absolute top-50 start-50 translate-middle text-uppercase contem3 m-0 hover-hide">CONTEMPORARY</h2>
+      </div>
+      <!-- ✅ Caption outside image, left-aligned -->
+      <div class="ps-2 pt-2 text-uppercase caption-bottom">
+        <div class="text-center text-md-start">Villa</div>
+        <div class="text-center text-md-start">GUJRAT</div>
+      </div>
+    </div>
+</div>
+
+<section class="container py-5">
+  <div class="row align-items-center">
+    
+    <!-- Left Side: Video/Image -->
+    <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
+      <img src="assets/rgadesing/elements/acdae.png" alt="Leopard" class="img-fluid">
+    </div>
+
+    <!-- Right Side: Text -->
+    <div class="col-12 col-md-6 text-center text-md-start">
+      <h2 class="tagline">
+        Strength in Stillness, <br>
+        Shelter in Space
+      </h2>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- ===== prefooter Section ===== -->
+    <div class="slide-container" id="slideContainer">
+              <!-- Slide 1 - Let's Get Started -->
+              <div class="slide slide-1">
+                  <div class="slide-content pb-5 p-md-0">
+                      <h1 class="main-title">
+                          LET'S<br>
+                          begin a<br>
+                           dialogue
+                      </h1>
+                      <div class="description-container">
+                      <p class="description">
+                          Ready to turn your vision into something real? So are we.
+                        </p> 
+                        <p class="description">
+                            Share your contact information and we’ll get back to you to discuss next steps.
+                          </p>
+                      </div>
+                  </div>
+                  <!-- Replace your existing icon wrapper with this -->
+                    <div
+                      class="nav-arrow prefooter-icon-clip"
+                      role="button"
+                      aria-label="Next slide"
+                      tabindex="0"
+                      onclick="slideToNext()"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToNext();}"
+                    >
+                      <div class="prefooter-icon" aria-hidden="true">
+                        <!-- default -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-default">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+
+                        
+
+                        <!-- hover state -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                          <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                          <g>
+                            <line class="prefooter-arrow" x1="5.66" y1="5.66" x2="50.91" y2="50.91"></line>
+                            <polyline class="prefooter-arrow" points="51.87 17.22 51.87 52.58 16.51 52.58"></polyline>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+              </div>
+              <!-- Slide 2 - Ask for Callback -->
+            <div class="slide slide-2 d-none d-lg-flex">
+              <!-- Left Arrow -->
+                  <div
+                    class="nav-arrow prefooter-icon-clip-left"
+                    role="button"
+                    aria-label="Previous slide"
+                    tabindex="0"
+                    onclick="slideToFirst()"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();slideToFirst();}"
+                  >
+                        <div class="prefooter-icons" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.87 60.58" class="icon-hover">
+                            <style>.prefooter-arrow{fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:16px}</style>
+                            <g>
+                              <line class="prefooter-arrow" x1="50" y1="30" x2="10" y2="30"></line>
+                              <polyline class="prefooter-arrow" points="25,10 10,30 25,50"></polyline>
+                            </g>
+                          </svg>
+                        </div>
+                  </div>
+
+                  <!-- Right Form -->
+                  <div class="form-section">
+                    <h2 class="form-title">ASK FOR A CALL BACK</h2>
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="eg. xyz">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">Number</label>
+                          <input type="tel" class="form-control" placeholder="987654321">
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+    </div>
+
+    <!-- Mobile Only Callback Form -->
+    <div class="container py-4 d-lg-none bg-black text-white">
+      <div class="row justify-content-between align-items-center mb-4">
+        <div class="col" style="max-width: 301px;">
+          <h2 class="text-uppercase mb-0" style="line-height: 1.1; color: #FFF;font-family: MiedingerBold;font-size: 28px;font-style: normal;font-weight: 700; line-height: 100%;"> 
+            ASK FOR
+            A CALL 
+            BACK
+          </h2>
+        </div>
+        <div class="col-auto">
+          <!-- Arrow image -->
+          <img src="assets/arrow.png" alt="Arrow" class="arrow-img">
+        </div>
+      </div>
+
+      <form>
+        <div class="mb-3" style="color: #FFF;font-family: SafiroMedium;font-size: 24px;font-style: normal;font-weight: 500;line-height: normal;">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control bg-black text-white border-0 border-bottom rounded-0" id="name" placeholder="eg. xyz">
+        </div>
+
+        <div class="mb-3">
+          <label for="number" class="form-label" style="white-space: nowrap;">Contact Number</label>
+          <input type="text" class="form-control bg-black text-white border-0 border-bottom rounded-0" id="number" placeholder="9887654321">
+        </div>
+
+        <!-- Left aligned button -->
+        <div class="text-start">
+          <button type="submit" class="submit-btn m-0">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+
+  <!-- Footer -->
+    <section class="footer-section">
+          <div class="container-fluid">
+                  <div class="row justify-content-between   mt-5 gap-sm-0 gap-md-0 gap-lg-0 gap-xl-0 gap-4 p-4">
+                      <!-- Column 1 -->
+                      <div class="col-4 col-md-6 col-lg-4 pt-0 pt-md-3 pt-lg-3">
+                      <div class="footer-column">
+                          <ul>
+                          <li><a href="whoweare.html">ABOUT</a></li>
+                          <li><a href="letstalk.html">CONTACT</a></li>
+                          <li><a href="award.html" target="_blank">AWARDS</a></li>
+                          <li><a href="media.html" target="_blank">MEDIA</a></li>
+                          <li><a href="comingsoon.html" target="_blank">COLLABORATION</a></li>
+                          </ul>
+                      </div>
+                      </div>
+                      <!-- Column 2 -->
+                      <div class="col-4 col-md-6 col-lg-4">
+                      <div class="footer-column">
+                          <div class="footer-links">
+                            <p><a href="cookie_policy.html" target="_blank">Cookie Policy</a></p>
+                          <p><a href="copyright_policy.html" target="_blank">Copyright Policy</a></p>
+                          <p><a href="privacy_policy.html" target="_blank">Privacy Policy</a></p>
+                          <p><a href="product_info.html" target="_blank">Product Information</a></p>
+                          <!--<p><a href="#">FAq's : lifestyle@casaparadox.com</a></p>-->
+                          </div>
+                      </div>
+                      </div>
+
+                    <!-- Column 3 -->
+                  <div class="col-12 col-md-12 col-lg-4 ps-md-4 mt-md-4 mt-lg-0">
+                    <div class="footer-column text-center text-lg-start">
+                        
+                        <!-- Phone + Email with icons -->
+                        <div class="contact-info mb-3">
+                        <p class="mb-1 d-flex align-items-center justify-content-start justify-content-lg-start">
+                            <!-- Phone Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="me-2 contact-icon" viewBox="0 0 16 16" fill="white">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.7a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.01c-.365-1.031-.04-2.137.7-2.877z"/>
+                            </svg>
+                            <a href="tel:+911234567890" class="text-decoration-none">+919313746825</a>
+                        </p>
+
+                        <p class="mb-0 d-flex align-items-center justify-content-start justify-content-lg-start">
+                            <!-- Email Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="me-2 contact-icon" viewBox="0 0 16 16" fill="white">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757ZM10.197 8.243 16 11.801V4.697l-5.803 3.546Z"/>
+                            </svg>
+                            <a href="connect@raseelgujralansal.com" class="text-decoration-none">connect@raseelgujralansal.com</a>
+                        </p>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="social-icons d-flex justify-content-start justify-content-lg-start">
+                          <a href="https://www.youtube.com/@RaseelGujralAnsal" class="me-2">
+                            <img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube">
+                          </a>
+                          <a href="https://www.instagram.com/raseelgujralansalofficial/" class="me-2">
+                            <img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram">
+                          </a>
+                          <a href="https://www.facebook.com/share/16rnA1tZCN/" class="me-2">
+                            <img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook">
+                          </a>
+                            <a href="https://www.linkedin.com/in/raseelgujralansal/"  class="me-2">
+                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" 
+                                alt="LinkedIn" style="fill:#0A66C2;">
+                            </a>
+
+                          <a href="#" class="me-2">
+                            <img src="https://simpleicons.org/icons/pinterest.svg" alt="Pinterest">
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+
+
+                  </div>
+              
+
+
+              <!-- Footer Logo -->
+              <div class="row">
+              <div class="col-12">
+             <div class="footer-logo position-relative d-inline-block w-100 no-wrap-logo">
+               RASEE<span id="raseel-l" class="raseel-l">L<span class="butterfly-class">
+                <img src="assets/Layer-15-A.gif" alt="Butterfly" class="butterfly-video" />
+                </span>
+              </span>
+            </div>
+              </div>
+              <div class="col-12">
+                  <div class="footer-logo-text margin-top-adjust">
+                  GUJRAL ANSAL
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="copyright">
+                  © RGA DESIGN STUDIO 2025 – all rights reserved.
+                  </div>
+              </div>
+              </div>
+          </div>
+    </section>
+    
+     <a href="https://wa.me/919313746825" 
+           class="whatsapp-float" 
+           target="_blank" 
+           aria-label="Chat on WhatsApp" 
+           data-bs-toggle="tooltip" 
+           data-bs-placement="left" 
+           title="Chat with us">
+           <i class="fa-brands fa-whatsapp"></i> </a>
+  </div>
+  
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+   
+<script>document.querySelectorAll(".card-hover").forEach(card => {
+  const video = card.querySelector(".hover-video");
+
+  card.addEventListener("mouseenter", () => {
+    video.currentTime = 0;
+    video.play();
+  });
+
+  card.addEventListener("mouseleave", () => {
+    video.pause();
+  });
+});
+</script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.addEventListener("refreshInit", () => {
+    gsap.set(".headline-clip", { x: 0, clearProps: "transform" });
+  });
+
+  ScrollTrigger.matchMedia({
+    "(min-width: 992px)": function () {
+      gsap.to(".headline-clip.one", {
+        x: "25vw", // pehle - tha, ab right side ke hisaab se + 
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.9
+        }
+      });
+
+      gsap.to(".headline-clip.two", {
+        x: "-50vw", // opposite movement
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+
+      gsap.to(".headline-clip.three", {
+        x: "-25vw", // balance for right-aligned
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 1.2
+        }
+      });
+
+      gsap.to(".headline-clip.four", {
+        x: "10vw", // chhoti movement, right ki taraf
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.8
+        }
+      });
+    },
+
+    "(max-width: 991px)": function () {
+      gsap.to(".headline-clip.one", {
+        x: "10vw", 
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+
+      gsap.to(".headline-clip.two", {
+        x: "-20vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+
+      gsap.to(".headline-clip.three", {
+        x: "-14vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.7
+        }
+      });
+
+      gsap.to(".headline-clip.four", {
+        x: "6vw",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-container",
+          start: "bottom 80%",
+          end: "bottom top",
+          scrub: 0.5
+        }
+      });
+    }
+  });
+</script>
+
+
+<!-- gsap scroll trigger-->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".content-col .block").forEach((block) => {
+      gsap.to(block, {
+        scrollTrigger: {
+          trigger: block,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+  </script>
+<!-- name section js -->
+   <script>
+   
+  gsap.registerPlugin(ScrollTrigger);
+
+  const namesList = document.querySelector("#namesList");
+  const items = gsap.utils.toArray(".names-item");
+  const itemHeight = items[0].offsetHeight;
+
+  gsap.to(namesList, {
+    y: () => -(items.length - 1) * itemHeight,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".names-section",
+      start: "top top",           // start when section hits top
+      end: "+=" + (items.length * itemHeight),
+      scrub: true,
+      pin: true,                  // keeps section pinned
+      anticipatePin: 1
+    }
+  });
+
+  </script>
+
+
+
+
+
+ <script>
+        const slideContainer = document.getElementById('slideContainer');
+        let isSlideTwo = false;
+        
+        function slideToNext() {
+            if (!isSlideTwo) {
+                slideContainer.classList.add('slide-right');
+                isSlideTwo = true;
+            }
+        }
+        
+        function slideToFirst() {
+            if (isSlideTwo) {
+                slideContainer.classList.remove('slide-right');
+                isSlideTwo = false;
+            }
+        }
+        
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! We will get back to you soon.');
+        });
+    </script>
+<!-- =================== END PREFOOTER (Poison-style) =================== -->
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const revealTexts = document.querySelectorAll(".reveal-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% visible
+  );
+
+  revealTexts.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+</script>
+<script>
+  const sidebar = document.getElementById("sidebar");
+
+  function toggleSidebar() {
+    if (!sidebar.classList.contains("open")) {
+     
+      sidebar.classList.add("open");
+    } else {
+     
+      sidebar.classList.remove("open");
+    }
+  }
+</script>
+        <!-- ✅ JS -->
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const who = document.getElementById("ourBrand");
+          const services = document.getElementById("servicesBlock");
+
+          if (!who || !services) return;
+
+          // helper: open block smoothly
+          function openBlock(el) {
+            el.style.maxHeight = el.scrollHeight + "px"; // auto height
+            el.classList.add("active");
+          }
+
+          // helper: close block smoothly
+          function closeBlock(el) {
+            el.style.maxHeight = "0px";
+            el.classList.remove("active");
+          }
+
+          // toggle function
+          function toggleBlock(el) {
+            if (el.classList.contains("active")) {
+              closeBlock(el);
+            } else {
+              openBlock(el);
+            }
+          }
+
+          // hover → open (but stays open)
+          who.addEventListener("mouseenter", function () {
+            openBlock(services);
+          });
+
+          // click → toggle
+          who.addEventListener("click", function () {
+            toggleBlock(services);
+          });
+        });
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
